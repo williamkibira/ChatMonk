@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/friend.h
+iostream
+-
+string
+-
+stactiverecord/stactive_record.h
+-
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.cpp
+group.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.h
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.h
+friend.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/friend.h
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.cpp
+invitation.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.h
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.h
+string
+-
+group.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.h
+
