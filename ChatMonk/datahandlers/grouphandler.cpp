@@ -17,63 +17,57 @@
 
 #include "grouphandler.h"
 
-GroupHandler::GroupHandler()
+GroupHandler::GroupHandler(const Session& session)
 {
-  datahandler = DataHandler::getInstance();
-  Sar_Dbi::dbi = datahandler->getDBSar();
+  this->session = session;
 }
 bool GroupHandler::deleteGroup(string group_id)
 {
-  Group groupDB;
-  groupDB.get("group_id",group_id);
-  
-  groupDB.del();
+  Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group_id).one();
+  groupDB.delete_object();
+  session.commit();
   return true;
 }
 bool GroupHandler::deleteGroup(Group* group)
 {
-  Group groupDB;
-  groupDB.get("group_id", group->group_id);
-  groupDB.del();
+  Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group->group_id).one();
+  groupDB.delete_object();
+  session.commit();
   return true;
 }
-std::list< Group > GroupHandler::getAllGroups()
+DomainResultSet<Group> GroupHandler::getAllGroups()
 {
-  std::list<Group> groups;
-  ObjGroup<Group> groupsDB = Group::all();
-  for(int i = 0; i < groupsDB.size(); ++i){
-    groups.push_back(groupsDB.at(i));
-  }
+  DomainResultSet<Group> groups = query<Group>(session).all();
+  
   return groups;
 }
-std::list< Group > GroupHandler::getGroupByName(string name)
+DomainResultSet<Group> GroupHandler::getGroupByName(string name)
 { 
-  std::list<Group> groups;
-  ObjGroup<Group> groupsDB = Group::find(Q("name",name) && Q("activated", true));
-  for(int i = 0; i < groupsDB.size(); ++i){
-    groups.push_back(groupsDB.at(i));
-  }
+  
+  DomainResultSet<Group> groups = query<Group>(session)
+  .filter_by(Group::c.group_name = name && Group::c.activated="TRUE").all();
+  
   return groups;
 }
 Group GroupHandler::getGroupByID(string group_id)
 {
-  Group groupDB;
-  groupDB.get("group_id", group_id);
+  Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group_id);
   return groupDB;
 }
-bool GroupHandler::saveGroup(protobuffer::GroupDef* groupDef)
+bool GroupHandler::saveGroup(const protobuffer::GroupDef& groupDef)
 {
-  Group groupDB;
-  groupDB.group_name = groupDef->group_name();
-  groupDB.group_id = groupDef->group_id();
-  groupDB.group_description = groupDef->group_description();
-  groupDB.group_photo_url = groupDef->group_photo_uri();
-  groupDB.activated = true;
-  groupDB.save();
-  return groupDB.has_been_saved();
+  Group::Holder groupDB;
+  groupDB->group_name = groupDef->group_name();
+  groupDB->group_id = groupDef->group_id();
+  groupDB->group_description = groupDef->group_description();
+  groupDB->group_photo_url = groupDef->group_photo_uri();
+  groupDB->activated = true;
+  groupDB->save(session);
+  session.commit();
+  return true;
 }
 
 GroupHandler::~GroupHandler()
 {
-  delete Sar_Dbi::dbi;
+  
 }

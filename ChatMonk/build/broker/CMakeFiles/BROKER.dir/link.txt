@@ -1,0 +1,2 @@
+/usr/bin/ar cr libBROKER.a  CMakeFiles/BROKER.dir/messageconsumer.cpp.o
+/usr/bin/ranlib libBROKER.a

@@ -1,1 +1,6 @@
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/broker/CMakeFiles/BROKER.dir
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/CMakeFiles/DATA_HANDLERS.dir
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models/CMakeFiles/MODELS.dir
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/network_handler/CMakeFiles/NETWORK_HANDLER.dir
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/protobuffer/CMakeFiles/PROTOBUFFER.dir
 /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles/chatmonk.dir

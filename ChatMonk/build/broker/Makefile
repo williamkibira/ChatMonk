@@ -139,18 +139,60 @@ depend:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+broker/CMakeFiles/BROKER.dir/rule:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f CMakeFiles/Makefile2 broker/CMakeFiles/BROKER.dir/rule
+.PHONY : broker/CMakeFiles/BROKER.dir/rule
+
+# Convenience name for target.
+BROKER: broker/CMakeFiles/BROKER.dir/rule
+.PHONY : BROKER
+
+# fast build rule for target.
+BROKER/fast:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/build
+.PHONY : BROKER/fast
+
+messageconsumer.o: messageconsumer.cpp.o
+.PHONY : messageconsumer.o
+
+# target to build an object file
+messageconsumer.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/messageconsumer.cpp.o
+.PHONY : messageconsumer.cpp.o
+
+messageconsumer.i: messageconsumer.cpp.i
+.PHONY : messageconsumer.i
+
+# target to preprocess a source file
+messageconsumer.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/messageconsumer.cpp.i
+.PHONY : messageconsumer.cpp.i
+
+messageconsumer.s: messageconsumer.cpp.s
+.PHONY : messageconsumer.s
+
+# target to generate assembly for a file
+messageconsumer.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/messageconsumer.cpp.s
+.PHONY : messageconsumer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... BROKER"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... messageconsumer.o"
+	@echo "... messageconsumer.i"
+	@echo "... messageconsumer.s"
 .PHONY : help
 
 

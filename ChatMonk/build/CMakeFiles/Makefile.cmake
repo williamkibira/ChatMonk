@@ -52,4 +52,9 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/chatmonk.dir/DependInfo.cmake"
+  "datahandlers/CMakeFiles/DATA_HANDLERS.dir/DependInfo.cmake"
+  "datahandlers/models/CMakeFiles/MODELS.dir/DependInfo.cmake"
+  "broker/CMakeFiles/BROKER.dir/DependInfo.cmake"
+  "network_handler/CMakeFiles/NETWORK_HANDLER.dir/DependInfo.cmake"
+  "protobuffer/CMakeFiles/PROTOBUFFER.dir/DependInfo.cmake"
   )

@@ -15,27 +15,24 @@
  * 
  */
 
-#include "models/friend.h"
-#include "datahandler.h"
+#include "models/Friend.h"
 #include "../protobuffer/chat_monk.pb.h"
-#include <list>
 #include <string>
 #ifndef FRIENDHANDLER_H
 #define FRIENDHANDLER_H
 class FriendHandler
 {
 public:
-FriendHandler();
+FriendHandler(const Session& session);
 ~FriendHandler();
-bool saveFriend(protobuffer::FriendDef* friendDef);
+bool saveFriend(const protobuffer::FriendDef& friendDef);
 Friend getFriendByID(std::string friendID);
-std::list<Friend> getAllFriends();
+DomainResultSet<Friend> getAllFriends();
 bool removeFriend(std::string friendID);
 bool removeFriend(Friend *friendDB);
-std::list<Friend> getFriendByName(std::string name);
+DomainResultSet<Friend> getFriendByName(std::string name);
 private:
-DataHandler * datahandler;
-Sar_Dbi * Sar_Dbi::dbi;
+Session session;
 
 };
 

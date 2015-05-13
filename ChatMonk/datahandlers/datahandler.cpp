@@ -20,24 +20,67 @@ DataHandler* DataHandler::_dbHandler = NULL;
 
 DataHandler::DataHandler()
 {
-  
+  try{
+     std::auto_ptr<Yb::SqlConnection> conn(new Yb::SqlConnection(
+            "sqlite+sqlite://./CHAT_MONK.dp"));
+    Yb::Engine engine(Yb::Engine::READ_WRITE, conn);
+    Yb::Session session(Yb::init_schema(), &engine);
+    // Initialize all the Handlers at one and keep the at bay
+    inviHandler = new InvitationHandler(session);
+    msgHandler = new MessageHandler(session);
+    frndHandler = new FriendHandler(session);
+    grpHandler = new GroupHandler(session);
+    }catch(exception &e){
+      printf("%sException Caught %s%s\n",RED,e->what().c_str(),RESET);
+    }
 }
 DataHandler* DataHandler::getInstance()
 {
-  if(_dbHandler != NULL){
+  if(_dbHandler == NULL){
     _dbHandler = new DataHandler();
+    printf("%s The Database Instance has been created %s\n",GREEN,RESET);
   }
-}
-Sar_Dbi* DataHandler::getDBSar()
-{
-  if(Sar_Dbi::dbi == NULL){
-    Sar_Dbi::dbi = Sar_Dbi::makeStorage(std::string(configDB));
-  }
-  return Sar_Dbi::dbi;
+  return _dbHandler;
 }
 
+GroupHandler* DataHandler::getGroupHandlerInst()
+{ 
+  if(grpHandler == NULL)
+  {
+    _dbHandler = new DataHandler();
+  }
+  return grpHandler;
+}
+FriendHandler* DataHandler::getFriendHandlerInst()
+{     
+  if(frndHandler == NULL)
+  {
+    _dbHandler = new DataHandler();
+  }
+      return frndHandler;
+}
+MessageHandler* DataHandler::getMessageHandlerInst()
+{     
+  if(msgHandler == NULL)
+  {
+    _dbHandler = new DataHandler();
+  }
+      return msgHandler;
+}
+InvitationHandler* DataHandler::getInvitationHandlerInst()
+{     
+  if(inviHandler == NULL)
+  {
+    _dbHandler = new DataHandler();
+  }
+      return inviHandler;
+}
 
 DataHandler::~DataHandler()
 {
-  delete Sar_Dbi::dbi;
+      delete invHandler;
+      delete msgHandler;
+      delete frndHandler;
+      delete grpHandler;
+      delete _dbHandler; 
 }

@@ -15,29 +15,28 @@
  * 
  */
 
-#include "datahandler.h"
-#include "models/group.h"
+
+#include "models/Group.h"
 #include "../protobuffer/chat_monk.pb.h"
 #include <string>
-#include <list>
 
 #ifndef GROUPHANDLER_H
 #define GROUPHANDLER_H
-
+using namespace Yb;
+using namespace Domain::Holder;
 class GroupHandler
 {
 public:
-GroupHandler();
+GroupHandler(const Session& session);
 ~GroupHandler();
-bool saveGroup(protobuffer::GroupDef* groupDef);
+bool saveGroup(const protobuffer::GroupDef& groupDef);
 bool deleteGroup(Group *group);
 bool deleteGroup(std::string group_id);
-std::list<Group> getAllGroups();
-std::list<Group> getGroupByName(std::string name);
+DomainResultSet<Group> getAllGroups();
+DomainResultSet<Group> getGroupByName(std::string name);
 Group getGroupByID(std::string group_id);
 private:
-  DataHandler *datahandler;
-  Sar_Dbi * Sar_Dbi::dbi;
+Session session;
 };
 
 #endif // GROUPHANDLER_H

@@ -139,18 +139,141 @@ depend:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+datahandlers/models/CMakeFiles/MODELS.dir/rule:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f CMakeFiles/Makefile2 datahandlers/models/CMakeFiles/MODELS.dir/rule
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/rule
+
+# Convenience name for target.
+MODELS: datahandlers/models/CMakeFiles/MODELS.dir/rule
+.PHONY : MODELS
+
+# fast build rule for target.
+MODELS/fast:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/build
+.PHONY : MODELS/fast
+
+chatmessage.o: chatmessage.cpp.o
+.PHONY : chatmessage.o
+
+# target to build an object file
+chatmessage.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o
+.PHONY : chatmessage.cpp.o
+
+chatmessage.i: chatmessage.cpp.i
+.PHONY : chatmessage.i
+
+# target to preprocess a source file
+chatmessage.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.i
+.PHONY : chatmessage.cpp.i
+
+chatmessage.s: chatmessage.cpp.s
+.PHONY : chatmessage.s
+
+# target to generate assembly for a file
+chatmessage.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.s
+.PHONY : chatmessage.cpp.s
+
+friend.o: friend.cpp.o
+.PHONY : friend.o
+
+# target to build an object file
+friend.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o
+.PHONY : friend.cpp.o
+
+friend.i: friend.cpp.i
+.PHONY : friend.i
+
+# target to preprocess a source file
+friend.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.i
+.PHONY : friend.cpp.i
+
+friend.s: friend.cpp.s
+.PHONY : friend.s
+
+# target to generate assembly for a file
+friend.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.s
+.PHONY : friend.cpp.s
+
+group.o: group.cpp.o
+.PHONY : group.o
+
+# target to build an object file
+group.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o
+.PHONY : group.cpp.o
+
+group.i: group.cpp.i
+.PHONY : group.i
+
+# target to preprocess a source file
+group.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.i
+.PHONY : group.cpp.i
+
+group.s: group.cpp.s
+.PHONY : group.s
+
+# target to generate assembly for a file
+group.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.s
+.PHONY : group.cpp.s
+
+invitation.o: invitation.cpp.o
+.PHONY : invitation.o
+
+# target to build an object file
+invitation.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o
+.PHONY : invitation.cpp.o
+
+invitation.i: invitation.cpp.i
+.PHONY : invitation.i
+
+# target to preprocess a source file
+invitation.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.i
+.PHONY : invitation.cpp.i
+
+invitation.s: invitation.cpp.s
+.PHONY : invitation.s
+
+# target to generate assembly for a file
+invitation.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.s
+.PHONY : invitation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... MODELS"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... chatmessage.o"
+	@echo "... chatmessage.i"
+	@echo "... chatmessage.s"
+	@echo "... friend.o"
+	@echo "... friend.i"
+	@echo "... friend.s"
+	@echo "... group.o"
+	@echo "... group.i"
+	@echo "... group.s"
+	@echo "... invitation.o"
+	@echo "... invitation.i"
+	@echo "... invitation.s"
 .PHONY : help
 
 

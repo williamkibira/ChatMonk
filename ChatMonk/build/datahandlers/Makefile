@@ -139,18 +139,168 @@ depend:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f CMakeFiles/Makefile2 datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule
+.PHONY : datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule
+
+# Convenience name for target.
+DATA_HANDLERS: datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule
+.PHONY : DATA_HANDLERS
+
+# fast build rule for target.
+DATA_HANDLERS/fast:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/build
+.PHONY : DATA_HANDLERS/fast
+
+datahandler.o: datahandler.cpp.o
+.PHONY : datahandler.o
+
+# target to build an object file
+datahandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/datahandler.cpp.o
+.PHONY : datahandler.cpp.o
+
+datahandler.i: datahandler.cpp.i
+.PHONY : datahandler.i
+
+# target to preprocess a source file
+datahandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/datahandler.cpp.i
+.PHONY : datahandler.cpp.i
+
+datahandler.s: datahandler.cpp.s
+.PHONY : datahandler.s
+
+# target to generate assembly for a file
+datahandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/datahandler.cpp.s
+.PHONY : datahandler.cpp.s
+
+friendhandler.o: friendhandler.cpp.o
+.PHONY : friendhandler.o
+
+# target to build an object file
+friendhandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/friendhandler.cpp.o
+.PHONY : friendhandler.cpp.o
+
+friendhandler.i: friendhandler.cpp.i
+.PHONY : friendhandler.i
+
+# target to preprocess a source file
+friendhandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/friendhandler.cpp.i
+.PHONY : friendhandler.cpp.i
+
+friendhandler.s: friendhandler.cpp.s
+.PHONY : friendhandler.s
+
+# target to generate assembly for a file
+friendhandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/friendhandler.cpp.s
+.PHONY : friendhandler.cpp.s
+
+grouphandler.o: grouphandler.cpp.o
+.PHONY : grouphandler.o
+
+# target to build an object file
+grouphandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/grouphandler.cpp.o
+.PHONY : grouphandler.cpp.o
+
+grouphandler.i: grouphandler.cpp.i
+.PHONY : grouphandler.i
+
+# target to preprocess a source file
+grouphandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/grouphandler.cpp.i
+.PHONY : grouphandler.cpp.i
+
+grouphandler.s: grouphandler.cpp.s
+.PHONY : grouphandler.s
+
+# target to generate assembly for a file
+grouphandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/grouphandler.cpp.s
+.PHONY : grouphandler.cpp.s
+
+invitationhandler.o: invitationhandler.cpp.o
+.PHONY : invitationhandler.o
+
+# target to build an object file
+invitationhandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/invitationhandler.cpp.o
+.PHONY : invitationhandler.cpp.o
+
+invitationhandler.i: invitationhandler.cpp.i
+.PHONY : invitationhandler.i
+
+# target to preprocess a source file
+invitationhandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/invitationhandler.cpp.i
+.PHONY : invitationhandler.cpp.i
+
+invitationhandler.s: invitationhandler.cpp.s
+.PHONY : invitationhandler.s
+
+# target to generate assembly for a file
+invitationhandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/invitationhandler.cpp.s
+.PHONY : invitationhandler.cpp.s
+
+messagehandler.o: messagehandler.cpp.o
+.PHONY : messagehandler.o
+
+# target to build an object file
+messagehandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/messagehandler.cpp.o
+.PHONY : messagehandler.cpp.o
+
+messagehandler.i: messagehandler.cpp.i
+.PHONY : messagehandler.i
+
+# target to preprocess a source file
+messagehandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/messagehandler.cpp.i
+.PHONY : messagehandler.cpp.i
+
+messagehandler.s: messagehandler.cpp.s
+.PHONY : messagehandler.s
+
+# target to generate assembly for a file
+messagehandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/messagehandler.cpp.s
+.PHONY : messagehandler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... DATA_HANDLERS"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... datahandler.o"
+	@echo "... datahandler.i"
+	@echo "... datahandler.s"
+	@echo "... friendhandler.o"
+	@echo "... friendhandler.i"
+	@echo "... friendhandler.s"
+	@echo "... grouphandler.o"
+	@echo "... grouphandler.i"
+	@echo "... grouphandler.s"
+	@echo "... invitationhandler.o"
+	@echo "... invitationhandler.i"
+	@echo "... invitationhandler.s"
+	@echo "... messagehandler.o"
+	@echo "... messagehandler.i"
+	@echo "... messagehandler.s"
 .PHONY : help
 
 

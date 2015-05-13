@@ -1,0 +1,85 @@
+<schema>
+  <table name="friend_tbl" sequence="seq_friend" class="Friend" xml-name="friend">
+      <column name="id" type="longint">
+       <primary-key/>
+      </column>  
+      <column name="first_name" type="string" size="25"/>
+      <column name="last_name" type="string" size="25"/>
+      <column name="email" type="string" size="40"/>
+      <column name="phone_number" type="string" size="15"/>
+      <column name="photo_url" type="string" size="100"/>
+      <column name="friend_id" type="string" size="255"/>
+    
+  </table>
+  
+  <table name="group_tbl" sequence="seq_group" class="Group" xml-name="group">
+    <column name="id" type="longint"> 
+      <primary-key/>
+    </column>
+    <column name="creator_id" type="longint" null="false">
+      <foreign-key table="friend_tbl" key="id"/>  
+    </column>
+    <column name="group_name" type="string" size="25"/>
+    <column name="group_description" type="string" size="150"/>
+    <column name="group_id" type="string" size="225"/>
+    <column name="group_photo_uri" type="string" size="100"/>
+    <column name="unique_id" type="string" size="255"/>
+    <column name="activated" type="string" size="14" default="DE-ACTIVATED"/>
+    
+    </table> 
+    
+    <table name="invitation_tbl" sequence="seq_invitation" class="Invitation" xml-name="invitation">
+      <column name="id" type="longint"> 
+	         <primary-key/>
+      </column>
+       <column name="group_id" type="longint" null="false">
+      <foreign-key table="group_tbl" key="id"/>  
+      </column>
+      <column name="private_message" type="string" size="150"/>
+      <column name="unique_id" type="string" size="255"/>
+     
+    </table>
+    
+    <table name="message_tbl" sequence="seq_message" class="ChatMessageDB" xml-name="message">
+      <column name="id" type="longint">
+	     <primary-key/>
+      </column>
+      <column name="message_data" type="string" size="500"/>
+      <column name="sender_id" type="string" size="255"/>
+      <column name="receiver_id" type="string" size="255"/>
+      <column name="message_type" type="string" size="10">
+     
+    </table>  
+    
+    
+    
+     <table name="attachment_tbl" sequence="seq_attachment" class="Attachment" xml-name="attachment">
+      <column name="id" type="longint">
+	    <primary-key/>
+      </column>
+      <column name="message_id" type="longint" null="true">
+      <foreign-key table="message_tbl" key="id"/>  
+      </column>
+      <column name="attachment_uri" type="string" size="255"/>
+    </table>
+    
+    
+    
+   
+    
+     <relation type="one-to-many">
+        <one class="Friend" property="groups" />
+        <many class="Group" property="creator" />
+    </relation>
+    
+    <relation type="one-to-one">
+        <one class="Group" property="group" />
+        <one class="Invitation" property="group" />
+    </relation>
+    
+    <relation type="one-to-many">
+        <one class="ChatMessageDB" property="attachments" />
+        <many class="Attachment" property="message" />
+    </relation>
+    
+</schema>  

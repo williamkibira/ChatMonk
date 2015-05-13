@@ -16,29 +16,29 @@
  */
 
 #include "../protobuffer/chat_monk.pb.h"
-#include "models/invitation.h"
+#include "models/Invitation.h"
 #include "grouphandler.h"
 #include <string>
-#include <list>
+
 
 
 #ifndef INVITATIONHANDLER_H
 #define INVITATIONHANDLER_H
-
+using namespace Yb;
+using namespace Domain::Holder;
 class InvitationHandler
 {
 public:
-InvitationHandler();
+InvitationHandler(const Session& session);
 ~InvitationHandler();
-bool saveInvitation(protobuffer::InvitationDef *invitation);
+bool saveInvitation(const protobuffer::InvitationDef& invitation);
 Invitation getInvitationByID(std::string invitationID);
-std::list<Invitation> getAllInvitations();
+DomainResultSet<Invitation> getAllInvitations();
 bool deleteInvitation(std::string invitationID);
 
 private:
 GroupHandler *grouphandler;
-DataHandler *dataHandler;
-Sar_Dbi *Sar_Dbi::sbi;
+Session session;
 };
 
 #endif // INVITATIONHANDLER_H

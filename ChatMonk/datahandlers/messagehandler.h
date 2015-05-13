@@ -15,28 +15,30 @@
  * 
  */
 
-#include "datahandler.h"
-#include "models/chatmessage.h"
+#include "models/ChatMessageDB.h"
 #include "../protobuffer/chat_monk.pb.h"
-#include <list>
 #include <string>
 
 #ifndef MESSAGEHANDLER_H
 #define MESSAGEHANDLER_H
 
+#define GROUP_MESSAGE "GROUP_MESSAGE"
+#define FRIEND_MESSAGE "FRIEND_MESSAGE"
+using namespace Yb;
+using namespace Domain::Holder;
+
 class MessageHandler
 {
 public:
-MessageHandler();
+MessageHandler(const Session& session);
 ~MessageHandler();
-bool saveMessage(protobuffer::Message *message);
-std::list<ChatMessage> getMessages(std::string friend_id);
-std::list<ChatMessage> getAllMessages();
+bool saveMessage(const protobuffer::Message& message);
+DomainResultSet<ChatMessageDB> getMessages(std::string friend_id);
+DomainResultSet<ChatMessageDB> getAllMessages();
 bool deleteConversation(std::string friend_id);
-bool deleteMessage(ChatMessage *message);
+bool deleteMessage(ChatMessageDB *message);
 private:
-DataHandler *datahandler;
-Sar_Dbi *Sar_Dbi::dbi;
+Session session;
 };
 
 #endif // MESSAGEHANDLER_H

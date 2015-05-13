@@ -1,0 +1,3 @@
+set(NETWORK_HANDLER_SOURCES networkhandler.cpp)
+
+add_library(NETWORK_HANDLER ${NETWORK_HANDLER_SOURCES})

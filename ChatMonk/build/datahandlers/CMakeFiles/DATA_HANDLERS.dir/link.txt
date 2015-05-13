@@ -1,0 +1,2 @@
+/usr/bin/ar cr libDATA_HANDLERS.a  CMakeFiles/DATA_HANDLERS.dir/datahandler.cpp.o CMakeFiles/DATA_HANDLERS.dir/friendhandler.cpp.o CMakeFiles/DATA_HANDLERS.dir/grouphandler.cpp.o CMakeFiles/DATA_HANDLERS.dir/invitationhandler.cpp.o CMakeFiles/DATA_HANDLERS.dir/messagehandler.cpp.o
+/usr/bin/ranlib libDATA_HANDLERS.a

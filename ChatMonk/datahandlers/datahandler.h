@@ -17,27 +17,41 @@
 
 #ifndef DATAHANDLER_H
 #define DATAHANDLER_H
-#include "models/chatmessage.h"
-#include "models/group.h"
-#include "models/friend.h"
-#include "models/invitation.h"
-#include <stactiverecord/stactive_record.h>
+#include "messagehandler.h"
+#include "friendhandler.h"
+#include "grouphandler.h"
+#include "invitationhandler.h"
+#include "../views/colors.h"
+#include <string.h>
+#include <stdio.h>
+#define DB_NAME "CHAT_MONK.ds"
+#define DB_TYPE
 
-using namespace stactiverecord;
+
+
 class DataHandler
 {
 public:
 
-
-~DataHandler();
+virtual ~DataHandler();
 DataHandler *getInstance();
-Sar_Dbi * getDBSar();
+
 private:
 DataHandler();
+
+GroupHandler* getGroupHandlerInst();
+FriendHandler* getFriendHandlerInst();
+MessageHandler* getMessageHandlerInst();
+InvitationHandler* getInvitationHandlerInst();
+
+
 private:
 static DataHandler* _dbHandler;
-Sar_Dbi * Sar_Dbi::dbi;
-std::string configDB;
+GroupHandler *grpHandler;
+FriendHandler *frndHandler;
+InvitationHandler *inviHandler;
+MessageHandler *msgHandler;
+
 };
 
 #endif // DATAHANDLER_H

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libPROTOBUFFER.a  CMakeFiles/PROTOBUFFER.dir/chat_monk.pb.cc.o
+/usr/bin/ranlib libPROTOBUFFER.a

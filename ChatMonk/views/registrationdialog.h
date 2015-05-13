@@ -17,28 +17,36 @@
 
 #ifndef REGISTRATIONDIALOG_H
 #define REGISTRATIONDIALOG_H
-#include <cdk/cdk.h>
 
-class RegistrationDialog
-{
+#include "reg_data.h"
+#include "../network_handler/networkhandler.h"
+#include "../protobuffer/chat_monk.pb.h"
+#include "colors.h"
+#include <stdio.h>
+
+#define REGISTRATION_URL ""
+
+class RegistrationDialog: public NetworkCBListener{
 public:
-RegistrationDialog(CDKSCREEN *screen);
-~RegistrationDialog();
+RegistrationDialog();
+virtual ~RegistrationDialog();
 
+bool takeInDetails();
+bool verifyDetails();
+
+void sendDetails();
+void saveDataToDB();
+void cbiNetworkStatus(std::string message, int status_code);
+void cbiProgressLevel(std::string message, double sent, double total);
 private:
-CDKTEMPLATE *regTemplate;
 // Labels
-char * first_name_label;
-char * last_name_label;
-char * phone_number_label;
-char * email;
-char * photo_path_label;
-// Entries
-char * first_name_entry;
-char * last_name_entry;
-char * phone_number_entry;
-char * email_entry;
-char * photo_path_entry;
+
+std::string first_name_entry;
+std::string last_name_entry;
+std::string phone_number_entry;
+std::string email_entry;
+std::string photo_path_entry;
+NetworkHandler *networkHandler;
 
 };
 

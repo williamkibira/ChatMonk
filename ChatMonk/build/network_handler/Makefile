@@ -139,18 +139,60 @@ depend:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f CMakeFiles/Makefile2 network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule
+.PHONY : network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule
+
+# Convenience name for target.
+NETWORK_HANDLER: network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule
+.PHONY : NETWORK_HANDLER
+
+# fast build rule for target.
+NETWORK_HANDLER/fast:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/build
+.PHONY : NETWORK_HANDLER/fast
+
+networkhandler.o: networkhandler.cpp.o
+.PHONY : networkhandler.o
+
+# target to build an object file
+networkhandler.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/networkhandler.cpp.o
+.PHONY : networkhandler.cpp.o
+
+networkhandler.i: networkhandler.cpp.i
+.PHONY : networkhandler.i
+
+# target to preprocess a source file
+networkhandler.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/networkhandler.cpp.i
+.PHONY : networkhandler.cpp.i
+
+networkhandler.s: networkhandler.cpp.s
+.PHONY : networkhandler.s
+
+# target to generate assembly for a file
+networkhandler.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/networkhandler.cpp.s
+.PHONY : networkhandler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... NETWORK_HANDLER"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... networkhandler.o"
+	@echo "... networkhandler.i"
+	@echo "... networkhandler.s"
 .PHONY : help
 
 

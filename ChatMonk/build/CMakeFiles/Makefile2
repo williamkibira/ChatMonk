@@ -56,10 +56,12 @@ CMAKE_BINARY_DIR = /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMo
 # Target rules for target CMakeFiles/chatmonk.dir
 
 # All Build rule for target.
-CMakeFiles/chatmonk.dir/all:
+CMakeFiles/chatmonk.dir/all: datahandlers/CMakeFiles/DATA_HANDLERS.dir/all
+CMakeFiles/chatmonk.dir/all: network_handler/CMakeFiles/NETWORK_HANDLER.dir/all
+CMakeFiles/chatmonk.dir/all: protobuffer/CMakeFiles/PROTOBUFFER.dir/all
 	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/depend
 	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  1 2 3 4 5 6 7 8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  13
 	@echo "Built target chatmonk"
 .PHONY : CMakeFiles/chatmonk.dir/all
 
@@ -106,10 +108,12 @@ views/preinstall:
 # Directory level rules for directory datahandlers
 
 # Convenience name for "all" pass in the directory.
+datahandlers/all: datahandlers/CMakeFiles/DATA_HANDLERS.dir/all
 datahandlers/all: datahandlers/models/all
 .PHONY : datahandlers/all
 
 # Convenience name for "clean" pass in the directory.
+datahandlers/clean: datahandlers/CMakeFiles/DATA_HANDLERS.dir/clean
 datahandlers/clean: datahandlers/models/clean
 .PHONY : datahandlers/clean
 
@@ -118,14 +122,49 @@ datahandlers/preinstall: datahandlers/models/preinstall
 .PHONY : datahandlers/preinstall
 
 #=============================================================================
+# Target rules for target datahandlers/CMakeFiles/DATA_HANDLERS.dir
+
+# All Build rule for target.
+datahandlers/CMakeFiles/DATA_HANDLERS.dir/all:
+	$(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/depend
+	$(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  2 3 4 5 6
+	@echo "Built target DATA_HANDLERS"
+.PHONY : datahandlers/CMakeFiles/DATA_HANDLERS.dir/all
+
+# Include target in all.
+all: datahandlers/CMakeFiles/DATA_HANDLERS.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 datahandlers/CMakeFiles/DATA_HANDLERS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 0
+.PHONY : datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule
+
+# Convenience name for target.
+DATA_HANDLERS: datahandlers/CMakeFiles/DATA_HANDLERS.dir/rule
+.PHONY : DATA_HANDLERS
+
+# clean rule for target.
+datahandlers/CMakeFiles/DATA_HANDLERS.dir/clean:
+	$(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/clean
+.PHONY : datahandlers/CMakeFiles/DATA_HANDLERS.dir/clean
+
+# clean rule for target.
+clean: datahandlers/CMakeFiles/DATA_HANDLERS.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory datahandlers/models
 
 # Convenience name for "all" pass in the directory.
-datahandlers/models/all:
+datahandlers/models/all: datahandlers/models/CMakeFiles/MODELS.dir/all
 .PHONY : datahandlers/models/all
 
 # Convenience name for "clean" pass in the directory.
-datahandlers/models/clean:
+datahandlers/models/clean: datahandlers/models/CMakeFiles/MODELS.dir/clean
 .PHONY : datahandlers/models/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -133,14 +172,49 @@ datahandlers/models/preinstall:
 .PHONY : datahandlers/models/preinstall
 
 #=============================================================================
+# Target rules for target datahandlers/models/CMakeFiles/MODELS.dir
+
+# All Build rule for target.
+datahandlers/models/CMakeFiles/MODELS.dir/all:
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/depend
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  7 8 9 10
+	@echo "Built target MODELS"
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/all
+
+# Include target in all.
+all: datahandlers/models/CMakeFiles/MODELS.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+datahandlers/models/CMakeFiles/MODELS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 datahandlers/models/CMakeFiles/MODELS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 0
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/rule
+
+# Convenience name for target.
+MODELS: datahandlers/models/CMakeFiles/MODELS.dir/rule
+.PHONY : MODELS
+
+# clean rule for target.
+datahandlers/models/CMakeFiles/MODELS.dir/clean:
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/clean
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/clean
+
+# clean rule for target.
+clean: datahandlers/models/CMakeFiles/MODELS.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory broker
 
 # Convenience name for "all" pass in the directory.
-broker/all:
+broker/all: broker/CMakeFiles/BROKER.dir/all
 .PHONY : broker/all
 
 # Convenience name for "clean" pass in the directory.
-broker/clean:
+broker/clean: broker/CMakeFiles/BROKER.dir/clean
 .PHONY : broker/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -148,14 +222,49 @@ broker/preinstall:
 .PHONY : broker/preinstall
 
 #=============================================================================
+# Target rules for target broker/CMakeFiles/BROKER.dir
+
+# All Build rule for target.
+broker/CMakeFiles/BROKER.dir/all:
+	$(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/depend
+	$(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  1
+	@echo "Built target BROKER"
+.PHONY : broker/CMakeFiles/BROKER.dir/all
+
+# Include target in all.
+all: broker/CMakeFiles/BROKER.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+broker/CMakeFiles/BROKER.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 broker/CMakeFiles/BROKER.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 0
+.PHONY : broker/CMakeFiles/BROKER.dir/rule
+
+# Convenience name for target.
+BROKER: broker/CMakeFiles/BROKER.dir/rule
+.PHONY : BROKER
+
+# clean rule for target.
+broker/CMakeFiles/BROKER.dir/clean:
+	$(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/clean
+.PHONY : broker/CMakeFiles/BROKER.dir/clean
+
+# clean rule for target.
+clean: broker/CMakeFiles/BROKER.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory network_handler
 
 # Convenience name for "all" pass in the directory.
-network_handler/all:
+network_handler/all: network_handler/CMakeFiles/NETWORK_HANDLER.dir/all
 .PHONY : network_handler/all
 
 # Convenience name for "clean" pass in the directory.
-network_handler/clean:
+network_handler/clean: network_handler/CMakeFiles/NETWORK_HANDLER.dir/clean
 .PHONY : network_handler/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -163,19 +272,89 @@ network_handler/preinstall:
 .PHONY : network_handler/preinstall
 
 #=============================================================================
+# Target rules for target network_handler/CMakeFiles/NETWORK_HANDLER.dir
+
+# All Build rule for target.
+network_handler/CMakeFiles/NETWORK_HANDLER.dir/all:
+	$(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/depend
+	$(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  11
+	@echo "Built target NETWORK_HANDLER"
+.PHONY : network_handler/CMakeFiles/NETWORK_HANDLER.dir/all
+
+# Include target in all.
+all: network_handler/CMakeFiles/NETWORK_HANDLER.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 network_handler/CMakeFiles/NETWORK_HANDLER.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 0
+.PHONY : network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule
+
+# Convenience name for target.
+NETWORK_HANDLER: network_handler/CMakeFiles/NETWORK_HANDLER.dir/rule
+.PHONY : NETWORK_HANDLER
+
+# clean rule for target.
+network_handler/CMakeFiles/NETWORK_HANDLER.dir/clean:
+	$(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/clean
+.PHONY : network_handler/CMakeFiles/NETWORK_HANDLER.dir/clean
+
+# clean rule for target.
+clean: network_handler/CMakeFiles/NETWORK_HANDLER.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory protobuffer
 
 # Convenience name for "all" pass in the directory.
-protobuffer/all:
+protobuffer/all: protobuffer/CMakeFiles/PROTOBUFFER.dir/all
 .PHONY : protobuffer/all
 
 # Convenience name for "clean" pass in the directory.
-protobuffer/clean:
+protobuffer/clean: protobuffer/CMakeFiles/PROTOBUFFER.dir/clean
 .PHONY : protobuffer/clean
 
 # Convenience name for "preinstall" pass in the directory.
 protobuffer/preinstall:
 .PHONY : protobuffer/preinstall
+
+#=============================================================================
+# Target rules for target protobuffer/CMakeFiles/PROTOBUFFER.dir
+
+# All Build rule for target.
+protobuffer/CMakeFiles/PROTOBUFFER.dir/all:
+	$(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/depend
+	$(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles  12
+	@echo "Built target PROTOBUFFER"
+.PHONY : protobuffer/CMakeFiles/PROTOBUFFER.dir/all
+
+# Include target in all.
+all: protobuffer/CMakeFiles/PROTOBUFFER.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+protobuffer/CMakeFiles/PROTOBUFFER.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 protobuffer/CMakeFiles/PROTOBUFFER.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles 0
+.PHONY : protobuffer/CMakeFiles/PROTOBUFFER.dir/rule
+
+# Convenience name for target.
+PROTOBUFFER: protobuffer/CMakeFiles/PROTOBUFFER.dir/rule
+.PHONY : PROTOBUFFER
+
+# clean rule for target.
+protobuffer/CMakeFiles/PROTOBUFFER.dir/clean:
+	$(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/clean
+.PHONY : protobuffer/CMakeFiles/PROTOBUFFER.dir/clean
+
+# clean rule for target.
+clean: protobuffer/CMakeFiles/PROTOBUFFER.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

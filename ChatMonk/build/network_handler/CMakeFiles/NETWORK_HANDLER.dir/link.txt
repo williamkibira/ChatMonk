@@ -1,0 +1,2 @@
+/usr/bin/ar cr libNETWORK_HANDLER.a  CMakeFiles/NETWORK_HANDLER.dir/networkhandler.cpp.o
+/usr/bin/ranlib libNETWORK_HANDLER.a

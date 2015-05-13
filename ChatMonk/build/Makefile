@@ -152,125 +152,70 @@ chatmonk/fast:
 	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/build
 .PHONY : chatmonk/fast
 
-broker/messageconsumer.o: broker/messageconsumer.cpp.o
-.PHONY : broker/messageconsumer.o
+#=============================================================================
+# Target rules for targets named DATA_HANDLERS
 
-# target to build an object file
-broker/messageconsumer.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/broker/messageconsumer.cpp.o
-.PHONY : broker/messageconsumer.cpp.o
+# Build rule for target.
+DATA_HANDLERS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DATA_HANDLERS
+.PHONY : DATA_HANDLERS
 
-broker/messageconsumer.i: broker/messageconsumer.cpp.i
-.PHONY : broker/messageconsumer.i
+# fast build rule for target.
+DATA_HANDLERS/fast:
+	$(MAKE) -f datahandlers/CMakeFiles/DATA_HANDLERS.dir/build.make datahandlers/CMakeFiles/DATA_HANDLERS.dir/build
+.PHONY : DATA_HANDLERS/fast
 
-# target to preprocess a source file
-broker/messageconsumer.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/broker/messageconsumer.cpp.i
-.PHONY : broker/messageconsumer.cpp.i
+#=============================================================================
+# Target rules for targets named MODELS
 
-broker/messageconsumer.s: broker/messageconsumer.cpp.s
-.PHONY : broker/messageconsumer.s
+# Build rule for target.
+MODELS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MODELS
+.PHONY : MODELS
 
-# target to generate assembly for a file
-broker/messageconsumer.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/broker/messageconsumer.cpp.s
-.PHONY : broker/messageconsumer.cpp.s
+# fast build rule for target.
+MODELS/fast:
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/build
+.PHONY : MODELS/fast
 
-datahandlers/models/chatmessage.o: datahandlers/models/chatmessage.cpp.o
-.PHONY : datahandlers/models/chatmessage.o
+#=============================================================================
+# Target rules for targets named BROKER
 
-# target to build an object file
-datahandlers/models/chatmessage.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/chatmessage.cpp.o
-.PHONY : datahandlers/models/chatmessage.cpp.o
+# Build rule for target.
+BROKER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BROKER
+.PHONY : BROKER
 
-datahandlers/models/chatmessage.i: datahandlers/models/chatmessage.cpp.i
-.PHONY : datahandlers/models/chatmessage.i
+# fast build rule for target.
+BROKER/fast:
+	$(MAKE) -f broker/CMakeFiles/BROKER.dir/build.make broker/CMakeFiles/BROKER.dir/build
+.PHONY : BROKER/fast
 
-# target to preprocess a source file
-datahandlers/models/chatmessage.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/chatmessage.cpp.i
-.PHONY : datahandlers/models/chatmessage.cpp.i
+#=============================================================================
+# Target rules for targets named NETWORK_HANDLER
 
-datahandlers/models/chatmessage.s: datahandlers/models/chatmessage.cpp.s
-.PHONY : datahandlers/models/chatmessage.s
+# Build rule for target.
+NETWORK_HANDLER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NETWORK_HANDLER
+.PHONY : NETWORK_HANDLER
 
-# target to generate assembly for a file
-datahandlers/models/chatmessage.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/chatmessage.cpp.s
-.PHONY : datahandlers/models/chatmessage.cpp.s
+# fast build rule for target.
+NETWORK_HANDLER/fast:
+	$(MAKE) -f network_handler/CMakeFiles/NETWORK_HANDLER.dir/build.make network_handler/CMakeFiles/NETWORK_HANDLER.dir/build
+.PHONY : NETWORK_HANDLER/fast
 
-datahandlers/models/friend.o: datahandlers/models/friend.cpp.o
-.PHONY : datahandlers/models/friend.o
+#=============================================================================
+# Target rules for targets named PROTOBUFFER
 
-# target to build an object file
-datahandlers/models/friend.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/friend.cpp.o
-.PHONY : datahandlers/models/friend.cpp.o
+# Build rule for target.
+PROTOBUFFER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PROTOBUFFER
+.PHONY : PROTOBUFFER
 
-datahandlers/models/friend.i: datahandlers/models/friend.cpp.i
-.PHONY : datahandlers/models/friend.i
-
-# target to preprocess a source file
-datahandlers/models/friend.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/friend.cpp.i
-.PHONY : datahandlers/models/friend.cpp.i
-
-datahandlers/models/friend.s: datahandlers/models/friend.cpp.s
-.PHONY : datahandlers/models/friend.s
-
-# target to generate assembly for a file
-datahandlers/models/friend.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/friend.cpp.s
-.PHONY : datahandlers/models/friend.cpp.s
-
-datahandlers/models/group.o: datahandlers/models/group.cpp.o
-.PHONY : datahandlers/models/group.o
-
-# target to build an object file
-datahandlers/models/group.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/group.cpp.o
-.PHONY : datahandlers/models/group.cpp.o
-
-datahandlers/models/group.i: datahandlers/models/group.cpp.i
-.PHONY : datahandlers/models/group.i
-
-# target to preprocess a source file
-datahandlers/models/group.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/group.cpp.i
-.PHONY : datahandlers/models/group.cpp.i
-
-datahandlers/models/group.s: datahandlers/models/group.cpp.s
-.PHONY : datahandlers/models/group.s
-
-# target to generate assembly for a file
-datahandlers/models/group.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/group.cpp.s
-.PHONY : datahandlers/models/group.cpp.s
-
-datahandlers/models/invitation.o: datahandlers/models/invitation.cpp.o
-.PHONY : datahandlers/models/invitation.o
-
-# target to build an object file
-datahandlers/models/invitation.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/invitation.cpp.o
-.PHONY : datahandlers/models/invitation.cpp.o
-
-datahandlers/models/invitation.i: datahandlers/models/invitation.cpp.i
-.PHONY : datahandlers/models/invitation.i
-
-# target to preprocess a source file
-datahandlers/models/invitation.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/invitation.cpp.i
-.PHONY : datahandlers/models/invitation.cpp.i
-
-datahandlers/models/invitation.s: datahandlers/models/invitation.cpp.s
-.PHONY : datahandlers/models/invitation.s
-
-# target to generate assembly for a file
-datahandlers/models/invitation.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/datahandlers/models/invitation.cpp.s
-.PHONY : datahandlers/models/invitation.cpp.s
+# fast build rule for target.
+PROTOBUFFER/fast:
+	$(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/build
+.PHONY : PROTOBUFFER/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -296,54 +241,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-network_handler/networkhandler.o: network_handler/networkhandler.cpp.o
-.PHONY : network_handler/networkhandler.o
-
-# target to build an object file
-network_handler/networkhandler.cpp.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/network_handler/networkhandler.cpp.o
-.PHONY : network_handler/networkhandler.cpp.o
-
-network_handler/networkhandler.i: network_handler/networkhandler.cpp.i
-.PHONY : network_handler/networkhandler.i
-
-# target to preprocess a source file
-network_handler/networkhandler.cpp.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/network_handler/networkhandler.cpp.i
-.PHONY : network_handler/networkhandler.cpp.i
-
-network_handler/networkhandler.s: network_handler/networkhandler.cpp.s
-.PHONY : network_handler/networkhandler.s
-
-# target to generate assembly for a file
-network_handler/networkhandler.cpp.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/network_handler/networkhandler.cpp.s
-.PHONY : network_handler/networkhandler.cpp.s
-
-protobuffer/chat_monk.pb.o: protobuffer/chat_monk.pb.cc.o
-.PHONY : protobuffer/chat_monk.pb.o
-
-# target to build an object file
-protobuffer/chat_monk.pb.cc.o:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/protobuffer/chat_monk.pb.cc.o
-.PHONY : protobuffer/chat_monk.pb.cc.o
-
-protobuffer/chat_monk.pb.i: protobuffer/chat_monk.pb.cc.i
-.PHONY : protobuffer/chat_monk.pb.i
-
-# target to preprocess a source file
-protobuffer/chat_monk.pb.cc.i:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/protobuffer/chat_monk.pb.cc.i
-.PHONY : protobuffer/chat_monk.pb.cc.i
-
-protobuffer/chat_monk.pb.s: protobuffer/chat_monk.pb.cc.s
-.PHONY : protobuffer/chat_monk.pb.s
-
-# target to generate assembly for a file
-protobuffer/chat_monk.pb.cc.s:
-	$(MAKE) -f CMakeFiles/chatmonk.dir/build.make CMakeFiles/chatmonk.dir/protobuffer/chat_monk.pb.cc.s
-.PHONY : protobuffer/chat_monk.pb.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,30 +254,14 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... broker/messageconsumer.o"
-	@echo "... broker/messageconsumer.i"
-	@echo "... broker/messageconsumer.s"
-	@echo "... datahandlers/models/chatmessage.o"
-	@echo "... datahandlers/models/chatmessage.i"
-	@echo "... datahandlers/models/chatmessage.s"
-	@echo "... datahandlers/models/friend.o"
-	@echo "... datahandlers/models/friend.i"
-	@echo "... datahandlers/models/friend.s"
-	@echo "... datahandlers/models/group.o"
-	@echo "... datahandlers/models/group.i"
-	@echo "... datahandlers/models/group.s"
-	@echo "... datahandlers/models/invitation.o"
-	@echo "... datahandlers/models/invitation.i"
-	@echo "... datahandlers/models/invitation.s"
+	@echo "... DATA_HANDLERS"
+	@echo "... MODELS"
+	@echo "... BROKER"
+	@echo "... NETWORK_HANDLER"
+	@echo "... PROTOBUFFER"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... network_handler/networkhandler.o"
-	@echo "... network_handler/networkhandler.i"
-	@echo "... network_handler/networkhandler.s"
-	@echo "... protobuffer/chat_monk.pb.o"
-	@echo "... protobuffer/chat_monk.pb.i"
-	@echo "... protobuffer/chat_monk.pb.s"
 .PHONY : help
 
 

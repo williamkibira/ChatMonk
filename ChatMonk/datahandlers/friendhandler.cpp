@@ -17,65 +17,62 @@
 
 #include "friendhandler.h"
 
-FriendHandler::FriendHandler()
+FriendHandler::FriendHandler(const Session& session)
 {
- datahandler = DataHandler::getInstance();
- Sar_Dbi::dbi = datahandler->getDBSar();
+ this->session = session;
   
 }
-std::list< Friend > FriendHandler::getAllFriends()
+DomainResultSet<Friend> FriendHandler::getAllFriends()
 {
+  DomainResultSet<Friend> friends = query<Friend>(session).all();
   
-  std::list<Friend> friends;
-  
-  ObjGroup<Friend> friendsDB = Friend::all();
-  for(int i=0; i < friendsDB.size();++i){
-    friends.push_back(friendsDB.at(i));
-  }
   return friends;
   
 }
 Friend FriendHandler::getFriendByID(string friendID)
 {
-  Friend friendDB;
-   friendDB.get("friend_id",friendID);
+  Friend friendDB = query<Friend>(session).filter_by(Friend::c.friend_id=friendID).one();
+  
   return friendDB;
 }
-std::list< Friend > FriendHandler::getFriendByName(string name)
+DomainResultSet<Friend> FriendHandler::getFriendByName(string name)
 {
-  std::list<Friend> friends;
-  ObjGroup<Friend> friendsDB = Friend::find(Q("first_name",name)||Q("last_name",name));
-  for(int i=0; i < friendsDB.size();++i){
-    friends.push_back(friendsDB.at(i));
-  }
+  
+  DomainResultSet<Friend> friends = query<Friend>(session)
+  .filter_by(Friend::c.first_name==name || Friend::c.last_name==name).all();
+  
   return friends;
 }
 bool FriendHandler::removeFriend(Friend* friendDB)
 {
-   Friend friendDel;
-   friendDel.get("friend_id",friendDB->friend_id);
-   friendDel.del();
+   Friend friendDel = query<Friend>(session)
+   .filter_by(Friend::c.friend_id==friendDB->friend_id).one();
+   friendDel.delete_object();
+   session.commit();
    return true;
 }
 bool FriendHandler::removeFriend(string friendID){
 
-   Friend friendDel;
-   friendDel.get("friend_id",friendID);
-   friendDel.del();
+   Friend friendDel = query<Friend>(session).filter_by(Friend::c.friend_id==friendID).one();
+   friendDel.delete_object();
+   session.commit();
    return true;
 }
 bool FriendHandler::saveFriend(protobuffer::FriendDef* friendDef)
 {
-    Friend friendDB;
-    friendDB.first_name = friendDef->first_name();
-    friendDB.last_name = friendDef->last_name();
-    friendDB.email = friendDef->email();
-    friendDB.phone_number = friendDef->phone_number();
-    friendDB.image_url = friendDef->photo_uri();
-    friendDB.save();
+    Friend::Holder friendDB;
+    friendDB->first_name = friendDef->first_name();
+    friendDB->last_name = friendDef->last_name();
+    friendDB->email = friendDef->email();
+    friendDB->phone_number = friendDef->phone_number();
+    friendDB->image_url = friendDef->photo_uri();
+    friendDB->save(session);
+    session.commit();
+    return true;
+    
 }
 
 FriendHandler::~FriendHandler()
 {
-  delete Sar_Dbi::dbi;
+  
 }

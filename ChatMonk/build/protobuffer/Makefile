@@ -139,18 +139,60 @@ depend:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+protobuffer/CMakeFiles/PROTOBUFFER.dir/rule:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f CMakeFiles/Makefile2 protobuffer/CMakeFiles/PROTOBUFFER.dir/rule
+.PHONY : protobuffer/CMakeFiles/PROTOBUFFER.dir/rule
+
+# Convenience name for target.
+PROTOBUFFER: protobuffer/CMakeFiles/PROTOBUFFER.dir/rule
+.PHONY : PROTOBUFFER
+
+# fast build rule for target.
+PROTOBUFFER/fast:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/build
+.PHONY : PROTOBUFFER/fast
+
+chat_monk.pb.o: chat_monk.pb.cc.o
+.PHONY : chat_monk.pb.o
+
+# target to build an object file
+chat_monk.pb.cc.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/chat_monk.pb.cc.o
+.PHONY : chat_monk.pb.cc.o
+
+chat_monk.pb.i: chat_monk.pb.cc.i
+.PHONY : chat_monk.pb.i
+
+# target to preprocess a source file
+chat_monk.pb.cc.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/chat_monk.pb.cc.i
+.PHONY : chat_monk.pb.cc.i
+
+chat_monk.pb.s: chat_monk.pb.cc.s
+.PHONY : chat_monk.pb.s
+
+# target to generate assembly for a file
+chat_monk.pb.cc.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f protobuffer/CMakeFiles/PROTOBUFFER.dir/build.make protobuffer/CMakeFiles/PROTOBUFFER.dir/chat_monk.pb.cc.s
+.PHONY : chat_monk.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... PROTOBUFFER"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... chat_monk.pb.o"
+	@echo "... chat_monk.pb.i"
+	@echo "... chat_monk.pb.s"
 .PHONY : help
 
 

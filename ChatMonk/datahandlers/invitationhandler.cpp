@@ -17,49 +17,46 @@
 
 #include "invitationhandler.h"
 
-InvitationHandler::InvitationHandler()
+InvitationHandler::InvitationHandler(const Session& session)
 {
-  dataHandler = DataHandler::getInstance();
-  Sar_Dbi::dbi = dataHandler->getDBSar();
+  this->session = session;
 }
 bool InvitationHandler::deleteInvitation(string invitationID)
 {
-  Invitation invitation;
-  invitation.get("unique_id", invitationID);
-  invitation.del();
+  Invitation invitation = query<Invitation>(session).filter_by(Invitation::c.unique_id==invitationID).one();
+  invitation.delete_object();
+  session.commit();
   return true;
 }
-list< Invitation > InvitationHandler::getAllInvitations()
+DomainResultSet<Invitation> InvitationHandler::getAllInvitations()
 {
-  std::list<Invitation> invitations;
-  ObjGroup<Invitation> invites = Invitation::all();
-  for(int i = 0; i < invites.size(); ++i){
-    invitations.push_back(invites.at(i));
-  }
+  
+  DomainResultSet<Invitation> invitations = query<Invitation>(session).all();
+ 
   return invitations;
 }
 Invitation InvitationHandler::getInvitationByID(string invitationID)
 {
-  Invitation invitation;
-  invitation.get("unique_id", invitationID);
+  Invitation invitation = query<Invitation>(sesssion).filter_by(Invitation::c.unique_id==invitationID).one();
   return invitation;
 }
-bool InvitationHandler::saveInvitation(protobuffer::InvitationDef* invitation)
+bool InvitationHandler::saveInvitation(const protobuffer::InvitationDef& invitation)
 {
   grouphandler = new GroupHandler();
-  Invitation invitationDB;
-  invitationDB.unique_id = invitation->unique_id();
-  invitationDB.private_message = invitation->personal_message();
-  grouphandler->saveGroup(invitation->group());
-  Group group = grouphandler->getGroupByID(invitation->group().group_id());
-  group.activated = false;
-  group.update();
+  Invitation::Holder invitationDB;
+  invitationDB->unique_id = invitation->unique_id();
+  invitationDB->private_message = invitation->personal_message();
+  grouphandler->saveGroup(invitation.group());
+  Group group = grouphandler->getGroupByID(invitation.group().group_id());
+  group.activated = "FALSE";
+  group.update(session);
   invitationDB.group = group;
-  invitationDB.save();
-  return invitationDB.has_been_saved();
+  invitationDB->save(session);
+  session.commit();
+  return true;
 }
 
 InvitationHandler::~InvitationHandler()
 {
-  delete Sar_Dbi::dbi;
+  
 }
