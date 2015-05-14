@@ -25,7 +25,7 @@
 #include <string.h>
 #include <stdio.h>
 #define DB_NAME "CHAT_MONK.ds"
-#define DB_TYPE
+#define DB_TYPE "sqlite"
 
 
 

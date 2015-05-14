@@ -16,18 +16,18 @@
  */
 
 
-#include "models/Group.h"
+#include "models/domain/Group.h"
 #include "../protobuffer/chat_monk.pb.h"
 #include <string>
 
 #ifndef GROUPHANDLER_H
 #define GROUPHANDLER_H
 using namespace Yb;
-using namespace Domain::Holder;
+using namespace Domain;
 class GroupHandler
 {
 public:
-GroupHandler(const Session& session);
+GroupHandler(Engine* engine);
 ~GroupHandler();
 bool saveGroup(const protobuffer::GroupDef& groupDef);
 bool deleteGroup(Group *group);
@@ -36,7 +36,7 @@ DomainResultSet<Group> getAllGroups();
 DomainResultSet<Group> getGroupByName(std::string name);
 Group getGroupByID(std::string group_id);
 private:
-Session session;
+Engine* engine;
 };
 
 #endif // GROUPHANDLER_H

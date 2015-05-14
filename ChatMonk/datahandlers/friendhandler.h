@@ -15,24 +15,30 @@
  * 
  */
 
-#include "models/Friend.h"
+#include "models/domain/Friend.h"
 #include "../protobuffer/chat_monk.pb.h"
 #include <string>
 #ifndef FRIENDHANDLER_H
 #define FRIENDHANDLER_H
+using namespace Yb;
+using namespace Domain;
+
 class FriendHandler
 {
 public:
-FriendHandler(const Session& session);
-~FriendHandler();
-bool saveFriend(const protobuffer::FriendDef& friendDef);
+FriendHandler(Engine* engine);
+  
+virtual ~FriendHandler();
+
+
+bool saveFriend(const protobuffer::FriendDef &friendDef);
 Friend getFriendByID(std::string friendID);
 DomainResultSet<Friend> getAllFriends();
 bool removeFriend(std::string friendID);
 bool removeFriend(Friend *friendDB);
 DomainResultSet<Friend> getFriendByName(std::string name);
 private:
-Session session;
+Engine* engine;
 
 };
 

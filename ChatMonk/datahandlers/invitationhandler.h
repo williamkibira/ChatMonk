@@ -16,7 +16,7 @@
  */
 
 #include "../protobuffer/chat_monk.pb.h"
-#include "models/Invitation.h"
+#include "models/domain/Invitation.h"
 #include "grouphandler.h"
 #include <string>
 
@@ -25,11 +25,11 @@
 #ifndef INVITATIONHANDLER_H
 #define INVITATIONHANDLER_H
 using namespace Yb;
-using namespace Domain::Holder;
+using namespace Domain;
 class InvitationHandler
 {
 public:
-InvitationHandler(const Session& session);
+InvitationHandler(Engine* engine);
 ~InvitationHandler();
 bool saveInvitation(const protobuffer::InvitationDef& invitation);
 Invitation getInvitationByID(std::string invitationID);
@@ -38,7 +38,7 @@ bool deleteInvitation(std::string invitationID);
 
 private:
 GroupHandler *grouphandler;
-Session session;
+Engine* engine;
 };
 
 #endif // INVITATIONHANDLER_H

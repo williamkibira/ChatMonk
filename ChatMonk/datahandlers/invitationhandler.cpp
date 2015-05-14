@@ -17,12 +17,13 @@
 
 #include "invitationhandler.h"
 
-InvitationHandler::InvitationHandler(const Session& session)
+InvitationHandler::InvitationHandler(Engine* engine)
 {
-  this->session = session;
+  this->engine = engine;
 }
-bool InvitationHandler::deleteInvitation(string invitationID)
+bool InvitationHandler::deleteInvitation(std::string invitationID)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   Invitation invitation = query<Invitation>(session).filter_by(Invitation::c.unique_id==invitationID).one();
   invitation.delete_object();
   session.commit();
@@ -30,27 +31,29 @@ bool InvitationHandler::deleteInvitation(string invitationID)
 }
 DomainResultSet<Invitation> InvitationHandler::getAllInvitations()
 {
-  
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<Invitation> invitations = query<Invitation>(session).all();
  
   return invitations;
 }
-Invitation InvitationHandler::getInvitationByID(string invitationID)
+Invitation InvitationHandler::getInvitationByID(std::string invitationID)
 {
-  Invitation invitation = query<Invitation>(sesssion).filter_by(Invitation::c.unique_id==invitationID).one();
+  Yb::Session session(Yb::init_schema(), engine);
+  Invitation invitation = query<Invitation>(session).filter_by(Invitation::c.unique_id==invitationID).one();
   return invitation;
 }
 bool InvitationHandler::saveInvitation(const protobuffer::InvitationDef& invitation)
 {
-  grouphandler = new GroupHandler();
-  Invitation::Holder invitationDB;
-  invitationDB->unique_id = invitation->unique_id();
-  invitationDB->private_message = invitation->personal_message();
+  Yb::Session session(Yb::init_schema(), engine);
+  grouphandler = new GroupHandler(engine);
+  Invitation::Holder invitationDB(session);
+  invitationDB->unique_id = invitation.unique_id();
+  invitationDB->private_message = invitation.personal_message();
   grouphandler->saveGroup(invitation.group());
   Group group = grouphandler->getGroupByID(invitation.group().group_id());
   group.activated = "FALSE";
-  group.update(session);
-  invitationDB.group = group;
+  group.save(session);
+  //invitationDB->sent_group = group;
   invitationDB->save(session);
   session.commit();
   return true;

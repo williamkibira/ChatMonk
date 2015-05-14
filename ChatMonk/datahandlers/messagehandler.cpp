@@ -17,57 +17,63 @@
 
 #include "messagehandler.h"
 
-MessageHandler::MessageHandler(const Session& session)
+MessageHandler::MessageHandler(Engine* engine)
 {
-    this->session = session
+    this->engine = engine;
 }
-bool MessageHandler::deleteConversation(string friend_id)
+bool MessageHandler::deleteConversation(std::string friend_id)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<ChatMessageDB> messages = query<ChatMessageDB>(session)
-  .filter_by(ChatMessageDB::c.receiver_id==friend_id || ChatMessageDB::c.sender_id==sender_id).all();
-  BOOST_FOREACH(ChatMessageDB message, messages){
-    message.delete_object();
+  .filter_by(ChatMessageDB::c.receiver_id==friend_id || ChatMessageDB::c.sender_id==friend_id).all();
+  BOOST_FOREACH(ChatMessageDB msg, messages){
+    msg.delete_object();
     session.commit();
   }
   return true;
 }
-bool MessageHandler::deleteMessage(ChatMessageDB* message)
+bool MessageHandler::deleteMessage(ChatMessageDB* mesg)
 {
-  ChatMessageDB chatmessage = query<ChatMessageDB>(session).filter_by(ChatMessageDB::c.message.id==message-.id).one();
+  Yb::Session session(Yb::init_schema(), engine);
+  ChatMessageDB chatmessage = query<ChatMessageDB>(session).filter_by(ChatMessageDB::c.id==mesg->id).one();
   // Then we figure out a way to delete the darn stuff man
-  chatmessage->delete_object();
+  chatmessage.delete_object();
   session.commit();
   return true;
 }
 DomainResultSet<ChatMessageDB> MessageHandler::getAllMessages()
 {
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<ChatMessageDB> messages = query<ChatMessageDB>(session)
   .all();
   return messages;
 }
-DomainResultSet<ChatMessageDB> MessageHandler::getMessages(string friend_id)
+DomainResultSet<ChatMessageDB> MessageHandler::getMessages(std::string friend_id)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<ChatMessageDB> messages = query<ChatMessageDB>(session)
   .filter_by(ChatMessageDB::c.sender_id==friend_id || ChatMessageDB::c.receiver_id==friend_id).all();
   return messages;
 }
 bool MessageHandler::saveMessage(const protobuffer::Message& message)
 {
-  ChatMessageDB::Holder chatMessage;
+  Yb::Session session(Yb::init_schema(), engine);
+  ChatMessageDB::Holder chatMessage(session);
   chatMessage->message_data = message.message_data();
-  if(message->messagetype()== protobuffer::Message::FRND_MSG){
-    chatMessage->message_type = FRIEND_MESSAGE;
+  if(message.messagetype()== protobuffer::Message::FRND_MSG){
+    //chatMessage = FRIEND_MESSAGE;
   }else{
-    chatMessage->message_type = GROUP_MESSAGE;
+    //chatMessage->message_type = GROUP_MESSAGE;
   }
   chatMessage->receiver_id = message.receiver_id();
   chatMessage->sender_id = message.sender_id();
   chatMessage->save(session);
-  if(message.has_attachments()){
+  if(message.attachments_size() > 0){
     for(int i = 0; i < message.attachments_size(); ++i){
-      Attachment::Holder attachment;
+      
+      Domain::Attachment::Holder attachment;
       const protobuffer::Attachment& att = message->attachments(i);
-      attachment->attachment_uri = att.attachment_uri;
+      attachment->attachment_uri = att.server_file_path();
       attachment->message = chatMessage;
       attachment->save(session);
     }

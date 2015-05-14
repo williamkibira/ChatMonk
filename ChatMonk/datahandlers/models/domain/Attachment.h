@@ -1,9 +1,9 @@
 #ifndef ORM_DOMAIN__ATTACHMENT__INCLUDED
 #define ORM_DOMAIN__ATTACHMENT__INCLUDED
 
-#include <orm/domain_object.h>
+#include <yb/orm/domain_object.h>
 // AUTOGEN_BEGIN(001) {
-#include "domain/ChatMessageDB.h"
+#include "../domain/ChatMessageDB.h"
 // } AUTOGEN_END
 
 namespace Domain {

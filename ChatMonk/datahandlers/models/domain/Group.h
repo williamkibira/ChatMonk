@@ -1,9 +1,9 @@
 #ifndef ORM_DOMAIN__GROUP__INCLUDED
 #define ORM_DOMAIN__GROUP__INCLUDED
 
-#include <orm/domain_object.h>
+#include <yb/orm/domain_object.h>
 // AUTOGEN_BEGIN(001) {
-#include "domain/Friend.h"
+#include "../domain/Friend.h"
 // } AUTOGEN_END
 
 namespace Domain {

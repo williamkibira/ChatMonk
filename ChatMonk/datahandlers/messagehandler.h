@@ -15,9 +15,10 @@
  * 
  */
 
-#include "models/ChatMessageDB.h"
+#include "models/domain/ChatMessageDB.h"
 #include "../protobuffer/chat_monk.pb.h"
 #include <string>
+#include <boost/foreach.hpp>
 
 #ifndef MESSAGEHANDLER_H
 #define MESSAGEHANDLER_H
@@ -25,12 +26,12 @@
 #define GROUP_MESSAGE "GROUP_MESSAGE"
 #define FRIEND_MESSAGE "FRIEND_MESSAGE"
 using namespace Yb;
-using namespace Domain::Holder;
+using namespace Domain;
 
 class MessageHandler
 {
 public:
-MessageHandler(const Session& session);
+MessageHandler(Engine* engine);
 ~MessageHandler();
 bool saveMessage(const protobuffer::Message& message);
 DomainResultSet<ChatMessageDB> getMessages(std::string friend_id);
@@ -38,7 +39,7 @@ DomainResultSet<ChatMessageDB> getAllMessages();
 bool deleteConversation(std::string friend_id);
 bool deleteMessage(ChatMessageDB *message);
 private:
-Session session;
+Engine* engine;
 };
 
 #endif // MESSAGEHANDLER_H

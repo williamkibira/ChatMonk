@@ -1,7 +1,7 @@
 #ifndef ORM_DOMAIN__CHATMESSAGEDB__INCLUDED
 #define ORM_DOMAIN__CHATMESSAGEDB__INCLUDED
 
-#include <orm/domain_object.h>
+#include <yb/orm/domain_object.h>
 // AUTOGEN_BEGIN(001) {
 // } AUTOGEN_END
 

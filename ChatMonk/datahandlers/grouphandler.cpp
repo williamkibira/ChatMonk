@@ -17,12 +17,13 @@
 
 #include "grouphandler.h"
 
-GroupHandler::GroupHandler(const Session& session)
+GroupHandler::GroupHandler(Engine* engine)
 {
-  this->session = session;
+  this->engine = engine;
 }
-bool GroupHandler::deleteGroup(string group_id)
+bool GroupHandler::deleteGroup(std::string group_id)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group_id).one();
   groupDB.delete_object();
   session.commit();
@@ -30,6 +31,7 @@ bool GroupHandler::deleteGroup(string group_id)
 }
 bool GroupHandler::deleteGroup(Group* group)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group->group_id).one();
   groupDB.delete_object();
   session.commit();
@@ -37,31 +39,34 @@ bool GroupHandler::deleteGroup(Group* group)
 }
 DomainResultSet<Group> GroupHandler::getAllGroups()
 {
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<Group> groups = query<Group>(session).all();
   
   return groups;
 }
-DomainResultSet<Group> GroupHandler::getGroupByName(string name)
+DomainResultSet<Group> GroupHandler::getGroupByName(std::string name)
 { 
-  
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<Group> groups = query<Group>(session)
-  .filter_by(Group::c.group_name = name && Group::c.activated="TRUE").all();
+  .filter_by(Group::c.group_name == name && Group::c.activated=="TRUE").all();
   
   return groups;
 }
-Group GroupHandler::getGroupByID(string group_id)
+Group GroupHandler::getGroupByID(std::string group_id)
 {
-  Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group_id);
+  Yb::Session session(Yb::init_schema(), engine);
+  Group groupDB = query<Group>(session).filter_by(Group::c.group_id==group_id).one();
   return groupDB;
 }
 bool GroupHandler::saveGroup(const protobuffer::GroupDef& groupDef)
 {
+  Yb::Session session(Yb::init_schema(), engine);
   Group::Holder groupDB;
-  groupDB->group_name = groupDef->group_name();
-  groupDB->group_id = groupDef->group_id();
-  groupDB->group_description = groupDef->group_description();
-  groupDB->group_photo_url = groupDef->group_photo_uri();
-  groupDB->activated = true;
+  groupDB->group_name = groupDef.group_name();
+  groupDB->group_id = groupDef.group_id();
+  groupDB->group_description = groupDef.group_description();
+  groupDB->group_photo_uri = groupDef.group_photo_uri();
+  groupDB->activated = "TRUE";
   groupDB->save(session);
   session.commit();
   return true;

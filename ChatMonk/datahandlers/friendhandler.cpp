@@ -17,27 +17,32 @@
 
 #include "friendhandler.h"
 
-FriendHandler::FriendHandler(const Session& session)
+FriendHandler::FriendHandler(Engine* engine)
 {
- this->session = session;
-  
+ this->engine = engine;
 }
+
+
+
 DomainResultSet<Friend> FriendHandler::getAllFriends()
 {
+   Yb::Session session(Yb::init_schema(), engine);
+
   DomainResultSet<Friend> friends = query<Friend>(session).all();
   
   return friends;
   
 }
-Friend FriendHandler::getFriendByID(string friendID)
+Friend FriendHandler::getFriendByID(std::string friendID)
 {
-  Friend friendDB = query<Friend>(session).filter_by(Friend::c.friend_id=friendID).one();
+  Yb::Session session(Yb::init_schema(), engine);
+  Friend friendDB = query<Friend>(session).filter_by(Friend::c.friend_id==friendID).one();
   
   return friendDB;
 }
-DomainResultSet<Friend> FriendHandler::getFriendByName(string name)
+DomainResultSet<Friend> FriendHandler::getFriendByName(std::string name)
 {
-  
+  Yb::Session session(Yb::init_schema(), engine);
   DomainResultSet<Friend> friends = query<Friend>(session)
   .filter_by(Friend::c.first_name==name || Friend::c.last_name==name).all();
   
@@ -45,29 +50,32 @@ DomainResultSet<Friend> FriendHandler::getFriendByName(string name)
 }
 bool FriendHandler::removeFriend(Friend* friendDB)
 {
+   Yb::Session session(Yb::init_schema(), engine);
    Friend friendDel = query<Friend>(session)
    .filter_by(Friend::c.friend_id==friendDB->friend_id).one();
    friendDel.delete_object();
    session.commit();
    return true;
 }
-bool FriendHandler::removeFriend(string friendID){
-
+bool FriendHandler::removeFriend(std::string friendID){
+   Yb::Session session(Yb::init_schema(), engine);
    Friend friendDel = query<Friend>(session).filter_by(Friend::c.friend_id==friendID).one();
    friendDel.delete_object();
    session.commit();
    return true;
 }
-bool FriendHandler::saveFriend(protobuffer::FriendDef* friendDef)
+
+bool FriendHandler::saveFriend(const protobuffer::FriendDef &friendDef)
 {
+    Yb::Session session(Yb::init_schema(), engine);
     Friend::Holder friendDB;
-    friendDB->first_name = friendDef->first_name();
-    friendDB->last_name = friendDef->last_name();
-    friendDB->email = friendDef->email();
-    friendDB->phone_number = friendDef->phone_number();
-    friendDB->image_url = friendDef->photo_uri();
+    friendDB->first_name = friendDef.first_name();
+    friendDB->last_name = friendDef.last_name();
+    friendDB->email = friendDef.email();
+    friendDB->phone_number = friendDef.phone_number();
+    friendDB->photo_url = friendDef.photo_uri();
     friendDB->save(session);
-    session.commit();
+    
     return true;
     
 }
