@@ -6,31 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.cc
-chat_monk.pb.h
-/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
-algorithm
--
-google/protobuf/stubs/common.h
--
-google/protobuf/stubs/once.h
--
-google/protobuf/io/coded_stream.h
--
-google/protobuf/wire_format_lite_inl.h
--
-
-/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
-string
--
-google/protobuf/stubs/common.h
--
-google/protobuf/generated_message_util.h
--
-google/protobuf/message_lite.h
--
-google/protobuf/repeated_field.h
--
-google/protobuf/extension_set.h
--
-

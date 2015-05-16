@@ -30,14 +30,14 @@ DataHandler::DataHandler()
     
             
     Yb::Engine engine(Yb::Engine::READ_WRITE, conn);
-    Yb::Session session(Yb::init_schema(), &engine);
+   // Yb::Session session(Yb::init_schema(), &engine);
     // Initialize all the Handlers at one and keep the at bay
-   // inviHandler = new InvitationHandler(session);
-   // msgHandler = new MessageHandler(session);
-   // frndHandler = new FriendHandler(session);
-   // grpHandler = new GroupHandler(session);
+      inviHandler = new InvitationHandler(&engine);
+      msgHandler = new MessageHandler(&engine);
+      frndHandler = new FriendHandler(&engine);
+      grpHandler = new GroupHandler(&engine);
     }catch(std::bad_exception& e){
-      //printf("%sException Caught %s%s\n",RED,e.what()->c_str(),RESET);
+      printf("%sException Caught %s%s\n",RED,e.what(),RESET);
     }
 }
 DataHandler* DataHandler::getInstance()

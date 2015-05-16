@@ -6,9 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/messagehandler.cpp
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/datahandler.cpp
+datahandler.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/datahandler.h
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/datahandler.h
 messagehandler.h
 /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/messagehandler.h
+friendhandler.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/friendhandler.h
+grouphandler.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/grouphandler.h
+invitationhandler.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/invitationhandler.h
+../views/colors.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/views/colors.h
+string.h
+-
+stdio.h
+-
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/friendhandler.h
+models/domain/Friend.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.h
+../protobuffer/chat_monk.pb.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
+string
+-
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/grouphandler.h
+models/domain/Group.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.h
+../protobuffer/chat_monk.pb.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
+string
+-
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/invitationhandler.h
+../protobuffer/chat_monk.pb.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
+models/domain/Invitation.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Invitation.h
+grouphandler.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/grouphandler.h
+string
+-
 
 /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/messagehandler.h
 models/domain/ChatMessageDB.h
@@ -32,6 +74,22 @@ ChatMessageDB.h
 yb/orm/domain_object.h
 -
 
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.h
+yb/orm/domain_object.h
+-
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.h
+yb/orm/domain_object.h
+-
+Friend.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.h
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Invitation.h
+yb/orm/domain_object.h
+-
+Group.h
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.h
+
 /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/protobuffer/chat_monk.pb.h
 string
 -
@@ -45,4 +103,6 @@ google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
 -
+
+/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/views/colors.h
 

@@ -5,7 +5,6 @@ add_executable(chatmonk main.cpp)
 
 install(TARGETS chatmonk RUNTIME DESTINATION bin)
 include_directories(amqpcpp/include/)
-include_directories(amqpcpp/src/)
 add_subdirectory(views)
 add_subdirectory(datahandlers)
 add_subdirectory(broker)
