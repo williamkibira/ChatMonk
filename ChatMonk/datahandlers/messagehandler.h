@@ -17,6 +17,7 @@
 
 #include "models/domain/ChatMessageDB.h"
 #include "../protobuffer/chat_monk.pb.h"
+#include "models/domain/AttachmentDB.h"
 #include <string>
 #include <boost/foreach.hpp>
 

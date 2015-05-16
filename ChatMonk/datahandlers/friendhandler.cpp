@@ -22,8 +22,6 @@ FriendHandler::FriendHandler(Engine* engine)
  this->engine = engine;
 }
 
-
-
 DomainResultSet<Friend> FriendHandler::getAllFriends()
 {
    Yb::Session session(Yb::init_schema(), engine);

@@ -8,8 +8,8 @@
 namespace Domain {
 
 // AUTOGEN_BEGIN(002) {
-class Attachment;
-typedef Yb::DomainObjHolder<Attachment> AttachmentHolder;
+class AttachmentDB;
+typedef Yb::DomainObjHolder<AttachmentDB> AttachmentDBHolder;
 // } AUTOGEN_END
 
 class ChatMessageDB;
@@ -21,7 +21,7 @@ public:
     typedef Yb::DomainObjHolder<ChatMessageDB> Holder;
 // AUTOGEN_BEGIN(007) {
     struct Columns {
-        Yb::Column id, message_data, sender_id, receiver_id;
+        Yb::Column id, message_data, sender_id, receiver_id, message_type;
         Columns();
         void fill_table(Yb::Table &tbl);
     };
@@ -51,8 +51,9 @@ public:
     Yb::Property<Yb::String> message_data;
     Yb::Property<Yb::String> sender_id;
     Yb::Property<Yb::String> receiver_id;
+    Yb::Property<Yb::String> message_type;
     // relation properties
-    Yb::ManagedList<Attachment> attachments;
+    Yb::ManagedList<AttachmentDB> attachments;
 // } AUTOGEN_END
 };
 

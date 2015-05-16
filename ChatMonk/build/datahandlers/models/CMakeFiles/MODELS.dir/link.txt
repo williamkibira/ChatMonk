@@ -1,2 +1,2 @@
-/usr/bin/ar cr libMODELS.a  CMakeFiles/MODELS.dir/chatmessage.cpp.o CMakeFiles/MODELS.dir/friend.cpp.o CMakeFiles/MODELS.dir/group.cpp.o CMakeFiles/MODELS.dir/invitation.cpp.o
+/usr/bin/ar cr libMODELS.a  CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o CMakeFiles/MODELS.dir/domain/Friend.cpp.o CMakeFiles/MODELS.dir/domain/Group.cpp.o CMakeFiles/MODELS.dir/domain/Invitation.cpp.o CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o
 /usr/bin/ranlib libMODELS.a

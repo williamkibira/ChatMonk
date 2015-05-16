@@ -3,7 +3,7 @@
 
 #include <yb/orm/domain_object.h>
 // AUTOGEN_BEGIN(001) {
-#include "../domain/Friend.h"
+#include "Friend.h"
 // } AUTOGEN_END
 
 namespace Domain {

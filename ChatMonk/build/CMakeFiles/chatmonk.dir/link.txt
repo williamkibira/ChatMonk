@@ -1,1 +1,1 @@
-/usr/bin/c++   -g    CMakeFiles/chatmonk.dir/main.cpp.o  -o chatmonk -rdynamic -lprotobuf -lcurl -lcdk -lncurses -lstactiverecord -lamqpcpp -lrabbitmq protobuffer/libPROTOBUFFER.a network_handler/libNETWORK_HANDLER.a datahandlers/libDATA_HANDLERS.a 
+/usr/bin/c++   -g    CMakeFiles/chatmonk.dir/main.cpp.o  -o chatmonk -rdynamic -lprotobuf -lcurl -lcdk -lncurses -lstactiverecord -lamqpcpp -lrabbitmq -lybutil -lyborm protobuffer/libPROTOBUFFER.a network_handler/libNETWORK_HANDLER.a datahandlers/libDATA_HANDLERS.a 

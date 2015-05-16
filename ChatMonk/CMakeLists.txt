@@ -12,6 +12,6 @@ add_subdirectory(broker)
 add_subdirectory(network_handler)
 add_subdirectory(protobuffer)
 
-target_link_libraries(chatmonk  protobuf curl cdk ncurses stactiverecord amqpcpp rabbitmq)
+target_link_libraries(chatmonk  protobuf curl cdk ncurses stactiverecord amqpcpp rabbitmq ybutil yborm)
 target_link_libraries(chatmonk PROTOBUFFER NETWORK_HANDLER DATA_HANDLERS)
 add_subdirectory(table_schemas)

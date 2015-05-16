@@ -41,6 +41,7 @@ CREATE TABLE message_tbl (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     message_data VARCHAR(500),
     sender_id VARCHAR(255),
-    receiver_id VARCHAR(255)
+    receiver_id VARCHAR(255),
+    message_type VARCHAR(10)
 );
 

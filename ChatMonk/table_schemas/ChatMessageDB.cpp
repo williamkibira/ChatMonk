@@ -19,11 +19,12 @@ ChatMessageDB::Columns::Columns()
     , message_data(_T("message_data"), Yb::Value::STRING, 500, Yb::Column::NULLABLE, Yb::Value(), _T(""), _T(""), _T("message-data"), _T("message_data"))
     , sender_id(_T("sender_id"), Yb::Value::STRING, 255, Yb::Column::NULLABLE, Yb::Value(), _T(""), _T(""), _T("sender-id"), _T("sender_id"))
     , receiver_id(_T("receiver_id"), Yb::Value::STRING, 255, Yb::Column::NULLABLE, Yb::Value(), _T(""), _T(""), _T("receiver-id"), _T("receiver_id"))
+    , message_type(_T("message_type"), Yb::Value::STRING, 10, Yb::Column::NULLABLE, Yb::Value(), _T(""), _T(""), _T("message-type"), _T("message_type"))
 {}
 
 void ChatMessageDB::Columns::fill_table(Yb::Table &tbl)
 {
-    tbl << id << message_data << sender_id << receiver_id;
+    tbl << id << message_data << sender_id << receiver_id << message_type;
 }
 
 void ChatMessageDB::create_tables_meta(Yb::Tables &tbls)
@@ -40,7 +41,7 @@ void ChatMessageDB::create_relations_meta(Yb::Relations &rels)
         Yb::Relation::AttrMap attr1, attr2;
         attr1[_T("property")] = _T("attachments");
         attr2[_T("property")] = _T("message");
-        Yb::Relation::Ptr r(new Yb::Relation(Yb::Relation::ONE2MANY, _T("ChatMessageDB"), attr1, _T("Attachment"), attr2, Yb::Relation::Restrict));
+        Yb::Relation::Ptr r(new Yb::Relation(Yb::Relation::ONE2MANY, _T("ChatMessageDB"), attr1, _T("AttachmentDB"), attr2, Yb::Relation::Restrict));
         rels.push_back(r);
     }
 }
@@ -53,6 +54,7 @@ ChatMessageDB::ChatMessageDB(Yb::DomainObject *owner, const Yb::String &prop_nam
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {}
@@ -64,6 +66,7 @@ ChatMessageDB::ChatMessageDB()
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {
@@ -78,6 +81,7 @@ ChatMessageDB::ChatMessageDB(const ChatMessageDB &other)
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {}
@@ -89,6 +93,7 @@ ChatMessageDB::ChatMessageDB(Yb::Session &session)
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {
@@ -104,6 +109,7 @@ ChatMessageDB::ChatMessageDB(Yb::DataObject::Ptr d)
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {}
@@ -115,6 +121,7 @@ ChatMessageDB::ChatMessageDB(Yb::Session &session, const Yb::Key &key)
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {}
@@ -126,6 +133,7 @@ ChatMessageDB::ChatMessageDB(Yb::Session &session, Yb::LongInt id)
     , message_data(this, 1)
     , sender_id(this, 2)
     , receiver_id(this, 3)
+    , message_type(this, 4)
     , attachments(this, _T("attachments"))
 // } AUTOGEN_END
 {}

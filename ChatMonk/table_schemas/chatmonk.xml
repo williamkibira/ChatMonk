@@ -47,13 +47,13 @@
       <column name="message_data" type="string" size="500"/>
       <column name="sender_id" type="string" size="255"/>
       <column name="receiver_id" type="string" size="255"/>
-      <column name="message_type" type="string" size="10">
+      <column name="message_type" type="string" size="10"/>
      
     </table>  
     
     
     
-     <table name="attachment_tbl" sequence="seq_attachment" class="Attachment" xml-name="attachment">
+     <table name="attachment_tbl" sequence="seq_attachment" class="AttachmentDB" xml-name="attachment">
       <column name="id" type="longint">
 	    <primary-key/>
       </column>
@@ -73,13 +73,13 @@
     </relation>
     
     <relation type="one-to-one">
-        <one class="Group" property="group" />
-        <one class="Invitation" property="group" />
+        <one class="Group" property="invite" />
+        <one class="Invitation" property="target_group" />
     </relation>
     
     <relation type="one-to-many">
         <one class="ChatMessageDB" property="attachments" />
-        <many class="Attachment" property="message" />
+        <many class="AttachmentDB" property="message" />
     </relation>
     
 </schema>  

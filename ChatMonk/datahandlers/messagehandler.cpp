@@ -17,6 +17,7 @@
 
 #include "messagehandler.h"
 
+
 MessageHandler::MessageHandler(Engine* engine)
 {
     this->engine = engine;
@@ -71,8 +72,8 @@ bool MessageHandler::saveMessage(const protobuffer::Message& message)
   if(message.attachments_size() > 0){
     for(int i = 0; i < message.attachments_size(); ++i){
       
-      Domain::Attachment::Holder attachment;
-      const protobuffer::Attachment& att = message->attachments(i);
+      AttachmentDB::Holder attachment;
+      const protobuffer::Attachment& att = message.attachments(i);
       attachment->attachment_uri = att.server_file_path();
       attachment->message = chatMessage;
       attachment->save(session);

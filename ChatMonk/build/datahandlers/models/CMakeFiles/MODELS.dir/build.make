@@ -49,112 +49,137 @@ include datahandlers/models/CMakeFiles/MODELS.dir/progress.make
 # Include the compile flags for this target's objects.
 include datahandlers/models/CMakeFiles/MODELS.dir/flags.make
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o: ../datahandlers/models/chatmessage.cpp
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o: ../datahandlers/models/domain/ChatMessageDB.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/chatmessage.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/chatmessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/ChatMessageDB.cpp
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/chatmessage.cpp.i"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/chatmessage.cpp > CMakeFiles/MODELS.dir/chatmessage.cpp.i
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.i"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/ChatMessageDB.cpp > CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.i
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/chatmessage.cpp.s"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/chatmessage.cpp -o CMakeFiles/MODELS.dir/chatmessage.cpp.s
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.s"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/ChatMessageDB.cpp -o CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.s
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.requires:
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.requires:
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.requires
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.requires
-	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.provides.build
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.provides
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.requires
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.provides.build
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.provides
 
-datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o
+datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o: ../datahandlers/models/friend.cpp
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o: ../datahandlers/models/domain/Friend.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/friend.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/friend.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/domain/Friend.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.cpp
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/friend.cpp.i"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/friend.cpp > CMakeFiles/MODELS.dir/friend.cpp.i
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/domain/Friend.cpp.i"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.cpp > CMakeFiles/MODELS.dir/domain/Friend.cpp.i
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/friend.cpp.s"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/friend.cpp -o CMakeFiles/MODELS.dir/friend.cpp.s
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/domain/Friend.cpp.s"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Friend.cpp -o CMakeFiles/MODELS.dir/domain/Friend.cpp.s
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.requires:
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.requires:
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.requires
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.requires
-	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.provides.build
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.provides
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.requires
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.provides.build
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.provides
 
-datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o: ../datahandlers/models/group.cpp
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o: ../datahandlers/models/domain/Group.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/group.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/domain/Group.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.cpp
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/group.cpp.i"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.cpp > CMakeFiles/MODELS.dir/group.cpp.i
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/domain/Group.cpp.i"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.cpp > CMakeFiles/MODELS.dir/domain/Group.cpp.i
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/group.cpp.s"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/group.cpp -o CMakeFiles/MODELS.dir/group.cpp.s
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/domain/Group.cpp.s"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Group.cpp -o CMakeFiles/MODELS.dir/domain/Group.cpp.s
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.requires:
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.requires:
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.requires
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.requires
-	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.provides.build
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.provides
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.requires
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.provides.build
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.provides
 
-datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o: ../datahandlers/models/invitation.cpp
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o: ../datahandlers/models/domain/Invitation.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/invitation.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/domain/Invitation.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Invitation.cpp
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/invitation.cpp.i"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.cpp > CMakeFiles/MODELS.dir/invitation.cpp.i
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/domain/Invitation.cpp.i"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Invitation.cpp > CMakeFiles/MODELS.dir/domain/Invitation.cpp.i
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/invitation.cpp.s"
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/invitation.cpp -o CMakeFiles/MODELS.dir/invitation.cpp.s
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/domain/Invitation.cpp.s"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/Invitation.cpp -o CMakeFiles/MODELS.dir/domain/Invitation.cpp.s
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.requires:
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.requires:
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.requires
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.requires
-	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.provides.build
-.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.provides
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.requires
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.provides.build
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.provides
 
-datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o
+datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o: datahandlers/models/CMakeFiles/MODELS.dir/flags.make
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o: ../datahandlers/models/domain/AttachmentDB.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o -c /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/AttachmentDB.cpp
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.i"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/AttachmentDB.cpp > CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.i
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.s"
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/datahandlers/models && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/datahandlers/models/domain/AttachmentDB.cpp -o CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.s
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.requires:
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.requires
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.provides: datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.requires
+	$(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.provides.build
+.PHONY : datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.provides
+
+datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.provides.build: datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o
 
 # Object files for target MODELS
 MODELS_OBJECTS = \
-"CMakeFiles/MODELS.dir/chatmessage.cpp.o" \
-"CMakeFiles/MODELS.dir/friend.cpp.o" \
-"CMakeFiles/MODELS.dir/group.cpp.o" \
-"CMakeFiles/MODELS.dir/invitation.cpp.o"
+"CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o" \
+"CMakeFiles/MODELS.dir/domain/Friend.cpp.o" \
+"CMakeFiles/MODELS.dir/domain/Group.cpp.o" \
+"CMakeFiles/MODELS.dir/domain/Invitation.cpp.o" \
+"CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o"
 
 # External object files for target MODELS
 MODELS_EXTERNAL_OBJECTS =
 
-datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o
-datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o
-datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o
-datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o
+datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o
+datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o
+datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o
+datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o
+datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o
 datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/build.make
 datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libMODELS.a"
@@ -165,10 +190,11 @@ datahandlers/models/libMODELS.a: datahandlers/models/CMakeFiles/MODELS.dir/link.
 datahandlers/models/CMakeFiles/MODELS.dir/build: datahandlers/models/libMODELS.a
 .PHONY : datahandlers/models/CMakeFiles/MODELS.dir/build
 
-datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o.requires
-datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o.requires
-datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o.requires
-datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o.requires
+datahandlers/models/CMakeFiles/MODELS.dir/requires: datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o.requires
 .PHONY : datahandlers/models/CMakeFiles/MODELS.dir/requires
 
 datahandlers/models/CMakeFiles/MODELS.dir/clean:

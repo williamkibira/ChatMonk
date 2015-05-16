@@ -55,6 +55,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/broker/cmake_install.cmake")
   INCLUDE("/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/network_handler/cmake_install.cmake")
   INCLUDE("/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/protobuffer/cmake_install.cmake")
+  INCLUDE("/home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build/table_schemas/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

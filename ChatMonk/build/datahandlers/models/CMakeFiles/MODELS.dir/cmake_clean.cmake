@@ -1,8 +1,9 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/MODELS.dir/chatmessage.cpp.o"
-  "CMakeFiles/MODELS.dir/friend.cpp.o"
-  "CMakeFiles/MODELS.dir/group.cpp.o"
-  "CMakeFiles/MODELS.dir/invitation.cpp.o"
+  "CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o"
+  "CMakeFiles/MODELS.dir/domain/Friend.cpp.o"
+  "CMakeFiles/MODELS.dir/domain/Group.cpp.o"
+  "CMakeFiles/MODELS.dir/domain/Invitation.cpp.o"
+  "CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o"
   "libMODELS.pdb"
   "libMODELS.a"
 )

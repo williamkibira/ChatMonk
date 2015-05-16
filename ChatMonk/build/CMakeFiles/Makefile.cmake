@@ -16,6 +16,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "../datahandlers/models/CMakeLists.txt"
   "../network_handler/CMakeLists.txt"
   "../protobuffer/CMakeLists.txt"
+  "../table_schemas/CMakeLists.txt"
   "../views/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
@@ -47,6 +48,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "broker/CMakeFiles/CMakeDirectoryInformation.cmake"
   "network_handler/CMakeFiles/CMakeDirectoryInformation.cmake"
   "protobuffer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "table_schemas/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

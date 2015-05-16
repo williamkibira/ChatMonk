@@ -153,101 +153,125 @@ MODELS/fast:
 	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/build
 .PHONY : MODELS/fast
 
-chatmessage.o: chatmessage.cpp.o
-.PHONY : chatmessage.o
+domain/AttachmentDB.o: domain/AttachmentDB.cpp.o
+.PHONY : domain/AttachmentDB.o
 
 # target to build an object file
-chatmessage.cpp.o:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.o
-.PHONY : chatmessage.cpp.o
+domain/AttachmentDB.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.o
+.PHONY : domain/AttachmentDB.cpp.o
 
-chatmessage.i: chatmessage.cpp.i
-.PHONY : chatmessage.i
+domain/AttachmentDB.i: domain/AttachmentDB.cpp.i
+.PHONY : domain/AttachmentDB.i
 
 # target to preprocess a source file
-chatmessage.cpp.i:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.i
-.PHONY : chatmessage.cpp.i
+domain/AttachmentDB.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.i
+.PHONY : domain/AttachmentDB.cpp.i
 
-chatmessage.s: chatmessage.cpp.s
-.PHONY : chatmessage.s
+domain/AttachmentDB.s: domain/AttachmentDB.cpp.s
+.PHONY : domain/AttachmentDB.s
 
 # target to generate assembly for a file
-chatmessage.cpp.s:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/chatmessage.cpp.s
-.PHONY : chatmessage.cpp.s
+domain/AttachmentDB.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/AttachmentDB.cpp.s
+.PHONY : domain/AttachmentDB.cpp.s
 
-friend.o: friend.cpp.o
-.PHONY : friend.o
+domain/ChatMessageDB.o: domain/ChatMessageDB.cpp.o
+.PHONY : domain/ChatMessageDB.o
 
 # target to build an object file
-friend.cpp.o:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.o
-.PHONY : friend.cpp.o
+domain/ChatMessageDB.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.o
+.PHONY : domain/ChatMessageDB.cpp.o
 
-friend.i: friend.cpp.i
-.PHONY : friend.i
+domain/ChatMessageDB.i: domain/ChatMessageDB.cpp.i
+.PHONY : domain/ChatMessageDB.i
 
 # target to preprocess a source file
-friend.cpp.i:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.i
-.PHONY : friend.cpp.i
+domain/ChatMessageDB.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.i
+.PHONY : domain/ChatMessageDB.cpp.i
 
-friend.s: friend.cpp.s
-.PHONY : friend.s
+domain/ChatMessageDB.s: domain/ChatMessageDB.cpp.s
+.PHONY : domain/ChatMessageDB.s
 
 # target to generate assembly for a file
-friend.cpp.s:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/friend.cpp.s
-.PHONY : friend.cpp.s
+domain/ChatMessageDB.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/ChatMessageDB.cpp.s
+.PHONY : domain/ChatMessageDB.cpp.s
 
-group.o: group.cpp.o
-.PHONY : group.o
+domain/Friend.o: domain/Friend.cpp.o
+.PHONY : domain/Friend.o
 
 # target to build an object file
-group.cpp.o:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.o
-.PHONY : group.cpp.o
+domain/Friend.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.o
+.PHONY : domain/Friend.cpp.o
 
-group.i: group.cpp.i
-.PHONY : group.i
+domain/Friend.i: domain/Friend.cpp.i
+.PHONY : domain/Friend.i
 
 # target to preprocess a source file
-group.cpp.i:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.i
-.PHONY : group.cpp.i
+domain/Friend.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.i
+.PHONY : domain/Friend.cpp.i
 
-group.s: group.cpp.s
-.PHONY : group.s
+domain/Friend.s: domain/Friend.cpp.s
+.PHONY : domain/Friend.s
 
 # target to generate assembly for a file
-group.cpp.s:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/group.cpp.s
-.PHONY : group.cpp.s
+domain/Friend.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Friend.cpp.s
+.PHONY : domain/Friend.cpp.s
 
-invitation.o: invitation.cpp.o
-.PHONY : invitation.o
+domain/Group.o: domain/Group.cpp.o
+.PHONY : domain/Group.o
 
 # target to build an object file
-invitation.cpp.o:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.o
-.PHONY : invitation.cpp.o
+domain/Group.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.o
+.PHONY : domain/Group.cpp.o
 
-invitation.i: invitation.cpp.i
-.PHONY : invitation.i
+domain/Group.i: domain/Group.cpp.i
+.PHONY : domain/Group.i
 
 # target to preprocess a source file
-invitation.cpp.i:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.i
-.PHONY : invitation.cpp.i
+domain/Group.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.i
+.PHONY : domain/Group.cpp.i
 
-invitation.s: invitation.cpp.s
-.PHONY : invitation.s
+domain/Group.s: domain/Group.cpp.s
+.PHONY : domain/Group.s
 
 # target to generate assembly for a file
-invitation.cpp.s:
-	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/invitation.cpp.s
-.PHONY : invitation.cpp.s
+domain/Group.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Group.cpp.s
+.PHONY : domain/Group.cpp.s
+
+domain/Invitation.o: domain/Invitation.cpp.o
+.PHONY : domain/Invitation.o
+
+# target to build an object file
+domain/Invitation.cpp.o:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.o
+.PHONY : domain/Invitation.cpp.o
+
+domain/Invitation.i: domain/Invitation.cpp.i
+.PHONY : domain/Invitation.i
+
+# target to preprocess a source file
+domain/Invitation.cpp.i:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.i
+.PHONY : domain/Invitation.cpp.i
+
+domain/Invitation.s: domain/Invitation.cpp.s
+.PHONY : domain/Invitation.s
+
+# target to generate assembly for a file
+domain/Invitation.cpp.s:
+	cd /home/william/Projects/CPP_Projects/CHAT_MONK/Chatmonk/ChatMonk/build && $(MAKE) -f datahandlers/models/CMakeFiles/MODELS.dir/build.make datahandlers/models/CMakeFiles/MODELS.dir/domain/Invitation.cpp.s
+.PHONY : domain/Invitation.cpp.s
 
 # Help Target
 help:
@@ -262,18 +286,21 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... chatmessage.o"
-	@echo "... chatmessage.i"
-	@echo "... chatmessage.s"
-	@echo "... friend.o"
-	@echo "... friend.i"
-	@echo "... friend.s"
-	@echo "... group.o"
-	@echo "... group.i"
-	@echo "... group.s"
-	@echo "... invitation.o"
-	@echo "... invitation.i"
-	@echo "... invitation.s"
+	@echo "... domain/AttachmentDB.o"
+	@echo "... domain/AttachmentDB.i"
+	@echo "... domain/AttachmentDB.s"
+	@echo "... domain/ChatMessageDB.o"
+	@echo "... domain/ChatMessageDB.i"
+	@echo "... domain/ChatMessageDB.s"
+	@echo "... domain/Friend.o"
+	@echo "... domain/Friend.i"
+	@echo "... domain/Friend.s"
+	@echo "... domain/Group.o"
+	@echo "... domain/Group.i"
+	@echo "... domain/Group.s"
+	@echo "... domain/Invitation.o"
+	@echo "... domain/Invitation.i"
+	@echo "... domain/Invitation.s"
 .PHONY : help
 
 
