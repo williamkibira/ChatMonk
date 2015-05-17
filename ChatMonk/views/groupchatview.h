@@ -25,12 +25,17 @@ class GroupChatView
 public:
 GroupChatView(CDKSCREEN *parent);
 virtual ~GroupChatView();
+protected:
+  void onSend(struct SButton *button);
+  void onAttach(struct SButton *button);
 private:
 GroupHandler *groupHandler;
 MessageHandler *MessageHandler;
 CDKSCREEN *parent;
 CDKVIEWER *fileViewer;
 CDKFSELECT *fileSelect;
+CDKSWINDOW grpMessagesWin;
+CDKBUTTON *sendMSG, *attachFile;
 int width;
 int height;
 

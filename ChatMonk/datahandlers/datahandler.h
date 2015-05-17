@@ -35,14 +35,14 @@ public:
 
 virtual ~DataHandler();
 DataHandler *getInstance();
-
-private:
-DataHandler();
-
 GroupHandler* getGroupHandlerInst();
 FriendHandler* getFriendHandlerInst();
 MessageHandler* getMessageHandlerInst();
 InvitationHandler* getInvitationHandlerInst();
+private:
+DataHandler();
+
+
 
 
 private:

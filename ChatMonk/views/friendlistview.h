@@ -32,6 +32,7 @@ CDKSCROLL *friendList;
 int width,height;
 int position_x,position_y;
 
+
   
 };
 
