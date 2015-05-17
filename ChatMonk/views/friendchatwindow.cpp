@@ -65,7 +65,7 @@ void FriendChatWindow::appendMessageScroll(std::string message,bool isReply, boo
 	message_format = "<R></11>:"<< message <<".";   
     }
     if(hasAttachment){
-        message_format.append<std::string>("HAS ATCH");
+        message_format.append<std::string>("</K/31>HAS ATCH<!31>"); // blue blinking text
     }
         addCDKSwindow (messageScroll, message_format.c_str(), BOTTOM);
 }
