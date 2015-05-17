@@ -24,8 +24,8 @@ GroupChatView::GroupChatView(CDKSCREEN *parent)
   msgHandler = DataHandler::getInstance()->getMessageHandlerInst();
   pos_x = parent->window->_begx;
   pos_y = parent->window->_begy;
-  msg_height = parent->window->_begx + 360;
-  msg_width = parent->window->_begy + 480;
+  msg_height = 360;
+  msg_width = 480;
 }
 void GroupChatView::appendMessageScroll(std::string message, bool isReply, bool hasAttachment)
 {
@@ -77,5 +77,7 @@ void GroupChatView::onAttachPressed()
 
 GroupChatView::~GroupChatView()
 {
-
+     destroyCDKButton(attachFile);
+     destroyCDKSwindow(grpMessagesWin);
+     destroyCDKEntry(messageEntry);
 }

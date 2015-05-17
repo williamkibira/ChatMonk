@@ -24,8 +24,8 @@ FriendChatWindow::FriendChatWindow(CDKSCREEN *parent)
   msgHandler = DataHandler::getInstance()->getMessageHandlerInst();
   pos_x = parent->window->_begx;
   pos_y = parent->window->_begy;
-  msg_height = parent->window->_begx + 360;
-  msg_width = parent->window->_begy + 480;
+  msg_height = 360;
+  msg_width = 480;
   
 }
 
@@ -85,5 +85,7 @@ void FriendChatWindow::onSendPressed()
 
 FriendChatWindow::~FriendChatWindow()
 {
-  
+     destroyCDKButton(attachFile);
+     destroyCDKSwindow(messageScroll);
+     destroyCDKEntry(messageEntry);
 }
