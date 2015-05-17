@@ -19,26 +19,34 @@
 #define GROUPCHATVIEW_H
 
 #include "../../datahandlers/datahandler.h"
+#include "../broker/group_message_listener.h"
 #include <cdk/cdk.h>
-class GroupChatView
+class GroupChatView:public GroupMessageListener
 {
 public:
 GroupChatView(CDKSCREEN *parent);
 virtual ~GroupChatView();
+void appendMessageScroll(std::string message, bool isReply, bool hasAttachment);
+void messageGroupReceived(const protobuffer::Message& messageData, size_t messageSize);
 protected:
-  void onSend(struct SButton *button);
-  void onAttach(struct SButton *button);
+  
+  static void onAttach(struct SButton *button);
+  void onAttachPressed();
+void initUI();
 private:
 GroupHandler *groupHandler;
 MessageHandler *MessageHandler;
 CDKSCREEN *parent;
-CDKVIEWER *fileViewer;
-CDKFSELECT *fileSelect;
 CDKSWINDOW grpMessagesWin;
-CDKBUTTON *sendMSG, *attachFile;
-int width;
-int height;
-
+CDKBUTTON *attachFile;
+CDKENTRY *messageEntry;
+int width, msg_width;
+int height, msg_height;
+int pos_x;
+int pos_y;
+std::string message_label, title_label, past_msg_title;
+static void* ptr;
+MessageHandler *msgHandler;
 };
 
 #endif // GROUPCHATVIEW_H
